@@ -11,40 +11,6 @@
     </header>
 
     <main>
-        <section id="serviceContainer">
-            <h2 class="serviceHeader">My Services</h2>
-            <div class="serviceCategory">
-                <div>
-                    <i class="serviceIcon"></i>
-                </div>
-                <h3 class="serviceTitle">Brand Identity</h3>
-                <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Eos ad exercitationem dolorem adipisci? Eaque corrupti 
-                    repudiandae unde maxime ipsum architecto.
-                </p>
-            </div>
-            <div class="serviceCategory">
-                <div>
-                    <i class="serviceIcon"></i>
-                </div>
-                <h3 class="serviceTitle">Web Design</h3>
-                <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Eos ad exercitationem dolorem adipisci? Eaque corrupti 
-                    repudiandae unde maxime ipsum architecto.
-                </p>
-            </div>
-            <div class="serviceCategory">
-                <div>
-                    <i class="serviceIcon"></i>
-                </div>
-                <h3 class="serviceTitle">Rocket Science</h3>
-                <p class="serviceText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Eos ad exercitationem dolorem adipisci? Eaque corrupti 
-                    repudiandae unde maxime ipsum architecto.
-                </p>
-            </div>
-        </section>
-
         <section>
             <div>
                 <img src="" alt="">
