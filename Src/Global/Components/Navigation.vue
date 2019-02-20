@@ -220,6 +220,10 @@
         display: inline-block;
     }
 
+    .menuNav a:hover {
+        background-color: var(--color-4);
+    }
+
     .menuNav a:visited {
         color: var(--color-7);
     }
