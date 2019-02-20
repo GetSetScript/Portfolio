@@ -1,0 +1,9 @@
+:root {
+
+    /* this area is for components with multiple moving pieces */
+
+    /* CHANGE ONE VALUE AND WATCH YOUR COMPONENTS SCALE! */
+
+    --size-hamburgerMenuSize: 100;
+
+}

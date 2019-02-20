@@ -1,0 +1,14 @@
+:root {
+
+    --color-1: #0D0C0C;
+    --color-2: #191818;
+    --color-3: #383535;
+    --color-4: #545050;
+    --color-5: #6E6868;
+    --color-6: #8F8888;
+    --color-7: #A8A0A0;
+
+
+    /* border color */
+    --color-menu-border: rgba(248, 248, 248, 0.2)
+}
