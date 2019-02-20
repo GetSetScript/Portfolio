@@ -5,9 +5,7 @@
       <navigation-bar></navigation-bar>
       
       <div class="headerMessageContainer">
-          <p class="headerMessage">Welcome to</p>
-          <h1 class="headerMessage middle">Graphista</h1>
-          <p class="headerMessage">The best choice for your online personal portfolio</p>
+          <h1 class="headerMessage">{ get; set; } Script!</h1>
       </div>
       <div class="headerBottom"></div>
     </header>
@@ -159,7 +157,7 @@
     </main>
 
     <footer>
-
+        
     </footer>
   </div>
 </template>
@@ -188,27 +186,20 @@
 }
 
 .headerMessageContainer {
-    background-image: url("./../Assets/Images/header.png");
+    background-image: url("./../Assets/Images/header2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 95vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .headerMessage {
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
-}
-
-.headerMessage.middle {
-    font-size: 2.5rem;
     text-transform: uppercase;
+    color: var(--color-7);
+    padding-top: 20vh;
 }
 
 .headerBottom {
