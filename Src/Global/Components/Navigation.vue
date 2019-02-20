@@ -6,7 +6,9 @@
                 <div class="menuLineMiddle"></div>
                 <div class="menuLineEnd"></div>
         </div>
-        <img class="logo" src="./../Assets/Images/logo.png" alt="The site logo">
+        <a href="#">
+            <img class="logo" src="./../Assets/Images/logo.png" alt="The site logo">
+        </a>
          
         <ul class="menuNav" v-bind:class="menuNavClasses">
             <a href="#"><li>What I do</li></a>
@@ -215,7 +217,6 @@
     .menuNav a:link {
         text-decoration: none;
         color: var(--color-7);
-        cursor: pointer;
         width: 100%;
         display: inline-block;
     }
