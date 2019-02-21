@@ -21,10 +21,13 @@
     --color-green: #7dcec8;
     --color-purple: #c39eca;
     /* --color-pink: #f9bac3; */
-    /* --color-pink: #e96935; */
-    --color-pink: var(--color-text-light);
-    --color-orange: #faae7a;
+    --color-pink: #e96935;
+    /* --color-orange: #faae7a; */
+    --color-orange: #eda25e;
     --color-yellow: #ecec7a;
+
+
+    --color-background-aboutMe: var(--color-orange);
 
 
     /* border color */

@@ -19,7 +19,7 @@
             <div id="aboutMeImageContainer">
                 <span id="aboutMeSecret"></span>
                 <img src="./../Assets/Images/profile-pic.png" 
-                 alt="A profile picutre of a young woman holding a firework" 
+                 alt="A profile picutre of a young woman holding a firework at sunset" 
                  id="aboutMeImage">
             </div>
         </section>
@@ -147,7 +147,7 @@
 <style scoped>
 
     #pageWrapper {
-        background-color: #eda25e;
+
     }
 
     #mainContentWrapper {
@@ -157,8 +157,7 @@
     /*  */
 
     .section {
-        padding: 0 3rem;
-        margin-bottom: 4rem;
+        padding: 4rem 3rem;
     }
 
     .sectionHeader {
@@ -173,7 +172,6 @@
     /*  */
 
     #header {
-        margin-bottom: 4rem;
         background-image: url("./../Assets/Images/header2.png");
         background-position: center;
         background-repeat: no-repeat;
@@ -200,7 +198,8 @@
     }
 
     #aboutMe.section {
-        margin-bottom: 6rem;
+        padding-bottom: 6rem;
+        background-color: var(--color-background-aboutMe);
     }
 
     #aboutMeMessageContainer {
@@ -221,8 +220,8 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(13deg);
-        border: 5px solid var(--color-profile-border);
-        border-bottom: 50px solid var(--color-profile-border);
+        border: .5rem solid var(--color-profile-border);
+        border-bottom: 3rem solid var(--color-profile-border);
         box-shadow: 3px 5px 11px 3px rgb(199, 139, 71);
     }
 
@@ -251,7 +250,7 @@
     /*  */
 
     #skills {
-        background-color: var(--color-pink);
+
     }
 
 
