@@ -168,7 +168,6 @@
     }
 
     .sectionHeader {
-        font-size: 2rem;
         text-transform: uppercase;
     }
 
@@ -245,7 +244,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: -500;
+        z-index: -1000;
     }
 
     #aboutMeSecret::before {

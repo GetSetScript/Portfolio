@@ -120,6 +120,7 @@
     .menuContainer {
         background-color: var(--color-5);
         position: fixed;
+        z-index: 500;
         width: 100%;
     }
 
