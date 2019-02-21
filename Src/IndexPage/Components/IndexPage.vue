@@ -17,10 +17,10 @@
                 </p>
             </div>
             <div id="aboutMeImageContainer">
+                <span id="aboutMeSecret"></span>
                 <img src="./../Assets/Images/profile-pic.png" 
                  alt="A profile picutre of a young woman holding a firework" 
                  id="aboutMeImage">
-                <span id="aboutMeSecret"></span>
             </div>
         </section>
 
@@ -147,7 +147,7 @@
 <style scoped>
 
     #pageWrapper {
-
+        background-color: #eda25e;
     }
 
     #mainContentWrapper {
@@ -199,15 +199,18 @@
         align-items: center;
     }
 
+    #aboutMe.section {
+        margin-bottom: 6rem;
+    }
+
     #aboutMeMessageContainer {
-        text-align: center;
-        padding: 0 1rem;
+        text-align: right;
+        padding-left: 1rem;
         max-width: 31rem;
         min-width: 19rem;
     }
 
     #aboutMeImageContainer {
-        position: relative;
         max-width: 31rem;
         min-width: 19rem;
     }
@@ -217,9 +220,10 @@
         height: auto;
         transition-duration: .5s;
         transition-property: transform;
-        transform: rotate(0deg);
+        transform: rotate(13deg);
         border: 5px solid var(--color-profile-border);
-        box-shadow: 3px 5px 11px 3px rgba(107,107,107,1);
+        border-bottom: 50px solid var(--color-profile-border);
+        box-shadow: 3px 5px 11px 3px rgb(199, 139, 71);
     }
 
     /* animate about me image rotation */
@@ -227,7 +231,7 @@
         #aboutMeImage:hover {
             transition-duration: .5s;
             transition-property: transform;
-            transform: rotate(13deg);
+            transform: rotate(0deg);
         }
 
     /*  */
@@ -237,10 +241,7 @@
         font-weight: var(--font-weight-fontAwesome-solid);
         color: var(--color-heart);
         font-size: 1.5rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1000;
+        margin-left: 2.8rem;
     }
 
     #aboutMeSecret::before {
@@ -260,6 +261,10 @@
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+        }
+
+        #aboutMeMessageContainer {
+            padding: 0 3rem;
         }
 
         #aboutMeSecret {

@@ -2,10 +2,10 @@
     
     /* text */
 
-    --color-text-lightest: #e2e2e2;
+    --color-text-lightest: #f6d3bd;
     --color-text-light: #d3d3d3;
     --color-text-darkest: #3a3a3a;
-    --color-text-dark: #4d4d4d;
+    --color-text-dark: #38200a;
 
 
     /* background */
@@ -20,7 +20,9 @@
     --color-blue: #7cd0f4;
     --color-green: #7dcec8;
     --color-purple: #c39eca;
-    --color-pink: #f9bac3;
+    /* --color-pink: #f9bac3; */
+    /* --color-pink: #e96935; */
+    --color-pink: var(--color-text-light);
     --color-orange: #faae7a;
     --color-yellow: #ecec7a;
 
@@ -28,9 +30,9 @@
     /* border color */
 
     --color-menu-border: #252525;
-    --color-profile-border: var(--color-orange);
+    --color-profile-border: var(--color-text-light);
 
 
     /* font awesome color */
-    --color-heart: red;
+    --color-heart: firebrick;
 }
