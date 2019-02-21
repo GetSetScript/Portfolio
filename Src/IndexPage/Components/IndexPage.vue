@@ -24,39 +24,8 @@
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2 class="sectionHeader">I got the skills</h2>
-            <p class="sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eos ad exercitationem dolorem adipisci? Eaque corrupti 
-                repudiandae unde maxime ipsum architecto.
-            </p>
-            <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Officiis fugit praesentium minima dolore et nobis 
-                repudiandae a sunt cupiditate commodi excepturi ex 
-                delectus, nulla quia veritatis omnis 
-                voluptatum saepe quidem.
-            </p>
-            <div>
-                <div>75%</div>
-                <div></div>
-                <h3>Photoshop</h3>
-            </div>
-            <div>
-                <div>70%</div>
-                <div></div>
-                <h3>Illustrator</h3>
-            </div>
-            <div>
-                <div>90%</div>
-                <div></div>
-                <h3>HTML</h3>
-            </div>
-            <div>
-                <div>60%</div>
-                <div></div>
-                <h3>CSS</h3>
-            </div>
-        </section>
+        <!-- <skill-section-large></skill-section-large> -->
+        <skill-section-small></skill-section-small>
 
         <section class="section">
             <h2 class="sectionHeader">My Works</h2>
@@ -123,12 +92,16 @@
 </template>
 
 <script>
-  import Navigation from "./../../Global/Components/Navigation.vue"
+  import Navigation from "./../../Global/Components/Navigation.vue";
+  import SkillSectionLargeScreen from "./LargeScreen/SkillSection.vue";
+  import SkillSectionSmallScreen from "./SmallScreen/SkillSection.vue";
 
   export default {
     name: "app",
     components: {
-      "navigation-bar": Navigation
+      "navigation-bar": Navigation,
+      "skill-section-large": SkillSectionLargeScreen,
+      "skill-section-small": SkillSectionSmallScreen
     },
     data() {
         return {
@@ -157,7 +130,7 @@
     /*  */
 
     .section {
-        padding: 4rem 3rem;
+        padding: 4rem 2.5rem;
     }
 
     .sectionHeader {
@@ -249,9 +222,7 @@
 
     /*  */
 
-    #skills {
 
-    }
 
 
     @media (min-width: 56rem) {
