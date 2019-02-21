@@ -1,13 +1,8 @@
 <template>
   <div id="pageWrapper">
     <header id="header">
-
-      <navigation-bar></navigation-bar>
-      
-      <div id="headerMessageContainer">
-          <h1 id="headerMessage">{ get; set; } Script!</h1>
-      </div>
-      <div id="headerBottom"></div>
+        <navigation-bar></navigation-bar>
+        <h1 id="headerMessage">{ get; set; } Script!</h1>
     </header>
 
     <main id="mainContentWrapper">
@@ -179,32 +174,20 @@
 
     #header {
         margin-bottom: 4rem;
-    }
-
-    #headerMessageContainer {
         background-image: url("./../Assets/Images/header2.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 95vh;
+        height: 100vh;
     }
 
     #headerMessage {
         font-size: 3rem;
         text-align: center;
         text-transform: uppercase;
-        color: var(--color-7);
+        color: var(--color-text-lightest);
         padding-top: 20vh;
-    }
-
-    #headerBottom {
-        background-image: url("./../Assets/Images/background-thin.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 100%;
-        height: 5vh;
     }
 
     /*  */
@@ -235,6 +218,8 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(0deg);
+        border: 5px solid var(--color-profile-border);
+        box-shadow: 3px 5px 11px 3px rgba(107,107,107,1);
     }
 
     /* animate about me image rotation */
@@ -265,7 +250,7 @@
     /*  */
 
     #skills {
-        background-color: pink;
+        background-color: var(--color-pink);
     }
 
 
@@ -277,22 +262,10 @@
             justify-content: space-evenly;
         }
 
+        #aboutMeSecret {
+            font-size: 2rem;
+        }
 
     }
-
-
-
-
-/* .serviceIcon {
-    font-family: var(--font-family-fontAwesome);
-    font-weight: var(--font-weight-fontAwesome-solid);
-    font-size: 5rem;
-    font-style: normal;
-}
-
-.serviceIcon::before {
-    content: var(--fontAwesome-light);
-} */
-
 
 </style>

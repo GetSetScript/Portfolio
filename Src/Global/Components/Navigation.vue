@@ -118,7 +118,7 @@
 <style scoped>
 
     .menuContainer {
-        background-color: var(--color-5);
+        background-color: var(--color-background-dark);
         position: fixed;
         z-index: 500;
         width: 100%;
@@ -147,7 +147,7 @@
     }
 
     .menuToggle div {
-        background-color: var(--color-7);
+        background-color: var(--color-background-light);
         height: calc(26rem / var(--size-hamburgerMenuSize));
         width: calc(180rem / var(--size-hamburgerMenuSize));
         margin: calc(31rem / var(--size-hamburgerMenuSize)) 0;
@@ -217,17 +217,17 @@
 
     .menuNav a:link {
         text-decoration: none;
-        color: var(--color-7);
+        color: var(--color-text-lightest);
         width: 100%;
         display: inline-block;
     }
 
     .menuNav a:hover {
-        background-color: var(--color-4);
+        background-color: var(--color-background-dark-hover);
     }
 
     .menuNav a:visited {
-        color: var(--color-7);
+        color: var(--color-text-lightest);
     }
 
 
