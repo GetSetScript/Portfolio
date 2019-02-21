@@ -1,34 +1,49 @@
 <template>
     <section id="skills" class="section">
         <h2 id="skillsHeader" class="sectionHeader">What technologies do I work with?</h2>
-        <nav>
-            <span id="left" class="menuArrow"></span>
-            <h3 id="skillsLabel">{{Label}}</h3>
-            <span id="right" class="menuArrow"></span>
+        <nav id="skillsNav">
+            <span id="left" class="menuArrow" v-on:click="skillCycle(-1)"></span>
+            <h3 id="skillsLabel">{{label}}</h3>
+            <span id="right" class="menuArrow" v-on:click="skillCycle(1)"></span>
         </nav>
         <div id="skillsMessageContainer">
-            <p class="sectionText">{{Paragraph1}}</p>
-            <p class="sectionText">{{Paragraph2}}</p>
-            <img id="skillsImage" v-bind:src="ImageUrl" alt="">
+            <p class="sectionText">{{paragraph1}}</p>
+            <p class="sectionText">{{paragraph2}}</p>
+            <img id="skillsImage" v-bind:src="imageUrl" alt="">
         </div>
     </section>
 </template>
 
 <script>
     import skillsSectionData from "./../../Scripts/skillSectionData.js";
+import skillSectionData from './../../Scripts/skillSectionData.js';
 
     export default {
         data() {
             return {
-                Label: skillsSectionData[0].label,
-                Paragraph1: skillsSectionData[0].paragraph1,
-                Paragraph2: skillsSectionData[0].paragraph2,
-                ImageUrl: skillsSectionData[0].imageUrl
+                label: skillsSectionData[0].label,
+                paragraph1: skillsSectionData[0].paragraph1,
+                paragraph2: skillsSectionData[0].paragraph2,
+                imageUrl: skillsSectionData[0].imageUrl,
+                skillIndex: 0
             }
         },
-        method: {
-            skillCycle() {
+        methods: {
+            skillCycle(cycleDirection) {
+                this.skillIndex += cycleDirection;
 
+                if(this.skillIndex === skillsSectionData.length) {
+                    this.skillIndex = 0;
+                }
+                
+                if(this.skillIndex < 0) {
+                    this.skillIndex = skillsSectionData.length - 1;
+                }
+
+                this.label = skillsSectionData[this.skillIndex].label;
+                this.paragraph1 = skillsSectionData[this.skillIndex].paragraph1;
+                this.paragraph2 = skillsSectionData[this.skillIndex].paragraph2;
+                this.imageUrl = skillSectionData[this.skillIndex].imageUrl;
             }
         }
     }
@@ -45,7 +60,33 @@
         height: auto;
     }
 
-    
+    #skillsNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+
+    #skillsLabel {
+        width: 100%;
+    }
+
+    .menuArrow {
+        font-family: var(--font-family-fontAwesome);
+        font-weight: var(--font-weight-fontAwesome-solid);
+        color: red;
+        font-size: 2rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .menuArrow#left::before {
+        content: var(--fontAwesome-leftArrow);
+    }
+
+    .menuArrow#right::before {
+        content: var(--fontAwesome-rightArrow);
+    }
 
 </style>
 
