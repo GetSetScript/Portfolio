@@ -1,42 +1,41 @@
 <template>
-  <div class="pageWrapper">
-    <header id="headerContainer">
+  <div id="pageWrapper">
+    <header id="header">
 
       <navigation-bar></navigation-bar>
       
-      <div class="headerMessageContainer">
-          <h1 class="headerMessage">{ get; set; } Script!</h1>
+      <div id="headerMessageContainer">
+          <h1 id="headerMessage">{ get; set; } Script!</h1>
       </div>
-      <div class="headerBottom"></div>
+      <div id="headerBottom"></div>
     </header>
 
-    <main>
-        <section>
-            <div>
-                <img src="" alt="">
-                <h2>I am Jane Doe</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Officiis fugit praesentium minima dolore et nobis 
-                    repudiandae a sunt cupiditate commodi excepturi ex 
-                    delectus, nulla quia veritatis omnis 
-                    voluptatum saepe quidem.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    <main id="mainContentWrapper">
+        <section id="aboutMe" class="section">
+            <div id="aboutMeMessageContainer">
+                <h2 class="sectionHeader">I am Terra Vermillion</h2>
+                <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Officiis fugit praesentium minima dolore et nobis 
                     repudiandae a sunt cupiditate commodi excepturi ex 
                     delectus, nulla quia veritatis omnis 
                     voluptatum saepe quidem.
                 </p>
             </div>
+            <div id="aboutMeImageContainer">
+                <img src="./../Assets/Images/profile-pic.png" 
+                 alt="A profile picutre of a young woman holding a firework" 
+                 id="aboutMeImage">
+                <span id="aboutMeSecret"></span>
+            </div>
         </section>
 
-        <section>
-            <h2>I got the skills</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        <section class="section">
+            <h2 class="sectionHeader">I got the skills</h2>
+            <p class="sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Eos ad exercitationem dolorem adipisci? Eaque corrupti 
                 repudiandae unde maxime ipsum architecto.
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Officiis fugit praesentium minima dolore et nobis 
                 repudiandae a sunt cupiditate commodi excepturi ex 
                 delectus, nulla quia veritatis omnis 
@@ -64,8 +63,8 @@
             </div>
         </section>
 
-        <section>
-            <h2>My Works</h2>
+        <section class="section">
+            <h2 class="sectionHeader">My Works</h2>
             <nav>
                 <ul>
                     <li>All</li>
@@ -101,13 +100,13 @@
             <span></span>
         </aside>
 
-        <section>
-            <h2>Contact Me</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        <section class="section">
+            <h2 class="sectionHeader">Contact Me</h2>
+            <p class="sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Eos ad exercitationem dolorem adipisci? Eaque corrupti 
                 repudiandae unde maxime ipsum architecto.
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Officiis fugit praesentium minima dolore et nobis 
                 repudiandae a sunt cupiditate commodi excepturi ex 
                 delectus, nulla quia veritatis omnis 
@@ -135,65 +134,131 @@
     name: "app",
     components: {
       "navigation-bar": Navigation
+    },
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+
+    },
+    computed: {
+
     }
   }
 </script>
 
 <style scoped>
 
-.pageWrapper {
-    background-color: pink;
-}
+    #pageWrapper {
 
-/*  */
+    }
 
-#headerContainer {
-    margin-bottom: 3rem;
-}
+    #mainContentWrapper {
+        width: 100%;
+        margin: auto;
+    }
 
-.headerMessageContainer {
-    background-image: url("./../Assets/Images/header2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 95vh;
-}
+    /*  */
 
-.headerMessage {
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--color-7);
-    padding-top: 20vh;
-}
+    .section {
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+    }
 
-.headerBottom {
-    background-image: url("./../Assets/Images/background-thin.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 100%;
-    height: 5vh;
-}
+    .sectionHeader {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
 
-/*  */
+    .sectionText {
+        line-height: 1.5;
+    }
 
-#serviceContainer {
-    margin-bottom: 3rem;
-    text-align: center;
-}
+    /*  */
 
-.serviceHeader {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
+    #header {
+        margin-bottom: 3rem;
+    }
 
-.serviceCategory {
+    #headerMessageContainer {
+        background-image: url("./../Assets/Images/header2.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 95vh;
+    }
 
-}
+    #headerMessage {
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-7);
+        padding-top: 20vh;
+    }
 
-.serviceIcon {
+    #headerBottom {
+        background-image: url("./../Assets/Images/background-thin.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        height: 5vh;
+    }
+
+    /*  */
+
+    #aboutMeMessageContainer {
+        /* text-align: center; */
+        margin-bottom: 2rem;
+    }
+
+    #aboutMeImageContainer {
+        position: relative;
+    }
+
+    #aboutMeImage {
+        width: 100%;
+        height: auto;
+        transition-duration: .5s;
+        transition-property: transform;
+        transform: rotate(0deg);
+    }
+
+    /* animate about me image rotation */
+
+        #aboutMeImage:hover {
+            transition-duration: .5s;
+            transition-property: transform;
+            transform: rotate(13deg);
+        }
+
+    /*  */
+
+    #aboutMeSecret {
+        font-family: var(--font-family-fontAwesome);
+        font-weight: var(--font-weight-fontAwesome-solid);
+        color: var(--color-heart);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -500;
+    }
+
+    #aboutMeSecret::before {
+        content: var(--fontAwesome-heart);
+    }
+
+
+
+
+
+
+
+/* .serviceIcon {
     font-family: var(--font-family-fontAwesome);
     font-weight: var(--font-weight-fontAwesome-solid);
     font-size: 5rem;
@@ -202,14 +267,7 @@
 
 .serviceIcon::before {
     content: var(--fontAwesome-light);
-}
+} */
 
-.serviceTitle {
-
-}
-
-.serviceText {
-
-}
 
 </style>

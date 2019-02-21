@@ -10,5 +10,8 @@
 
 
     /* border color */
-    --color-menu-border: rgba(248, 248, 248, 0.2)
+    --color-menu-border: rgba(248, 248, 248, 0.2);
+
+    /* font awesome color */
+    --color-heart: red;
 }
