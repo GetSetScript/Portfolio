@@ -15,8 +15,7 @@
 </template>
 
 <script>
-    import skillsSectionData from "./../../Scripts/skillSectionData.js";
-import skillSectionData from './../../Scripts/skillSectionData.js';
+    import skillsSectionData from "./../../../Scripts/skillSectionData.js";
 
     export default {
         data() {
@@ -53,14 +52,19 @@ import skillSectionData from './../../Scripts/skillSectionData.js';
 
     #skills {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #skillsImage {
-        max-width: 100px;
-        height: auto;
+        height: 100px;
+        width: auto;
     }
 
     #skillsNav {
+        width: 100%;
+        max-width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -86,6 +90,18 @@ import skillSectionData from './../../Scripts/skillSectionData.js';
 
     .menuArrow#right::before {
         content: var(--fontAwesome-rightArrow);
+    }
+
+    #skillsMessageContainer {
+        max-width: 31rem;
+    }
+
+    @media (min-width: 56rem) {
+
+        .menuArrow {
+            font-size: 3rem;
+        }
+
     }
 
 </style>

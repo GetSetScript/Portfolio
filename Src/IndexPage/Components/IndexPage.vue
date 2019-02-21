@@ -27,28 +27,7 @@
         <!-- <skill-section-large></skill-section-large> -->
         <skill-section-small></skill-section-small>
 
-        <section class="section">
-            <h2 class="sectionHeader">My Works</h2>
-            <nav>
-                <ul>
-                    <li>All</li>
-                    <li>Identity</li>
-                    <li>Logo</li>
-                    <li>Illustration</li>
-                </ul>
-            </nav>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div></div>
-            <div></div>
-            <div></div>
-        </section>
+        <work-section></work-section>
 
         <aside>
             <i></i>
@@ -93,15 +72,17 @@
 
 <script>
   import Navigation from "./../../Global/Components/Navigation.vue";
-  import SkillSectionLargeScreen from "./LargeScreen/SkillSection.vue";
-  import SkillSectionSmallScreen from "./SmallScreen/SkillSection.vue";
+  import SkillSectionLargeScreen from "./Sections/Skill/LargeScreen.vue";
+  import SkillSectionSmallScreen from "./Sections/Skill/SmallScreen.vue";
+  import WorkSection from "./Sections/Work/WorkSection.vue";
 
   export default {
     name: "app",
     components: {
       "navigation-bar": Navigation,
       "skill-section-large": SkillSectionLargeScreen,
-      "skill-section-small": SkillSectionSmallScreen
+      "skill-section-small": SkillSectionSmallScreen,
+      "work-section": WorkSection
     },
     data() {
         return {
@@ -221,8 +202,6 @@
     }
 
     /*  */
-
-
 
 
     @media (min-width: 56rem) {

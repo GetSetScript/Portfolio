@@ -28,7 +28,7 @@
 </template>
 
 <script>
-    import FrontEndSkill from "./FrontEndSkillTree.vue";
+    import FrontEndSkill from "./SkillTreeFrontEnd.vue";
 
     export default {
         components: {
