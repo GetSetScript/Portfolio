@@ -96,6 +96,10 @@
         max-width: 31rem;
     }
 
+    #skillsMessageContainer > p {
+        text-align: left;
+    }
+
     @media (min-width: 56rem) {
 
         .menuArrow {
