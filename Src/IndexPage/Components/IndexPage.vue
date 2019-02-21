@@ -29,7 +29,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="skills" class="section">
             <h2 class="sectionHeader">I got the skills</h2>
             <p class="sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Eos ad exercitationem dolorem adipisci? Eaque corrupti 
@@ -156,15 +156,14 @@
     }
 
     #mainContentWrapper {
-        width: 100%;
-        margin: auto;
+
     }
 
     /*  */
 
     .section {
         padding: 0 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     .sectionHeader {
@@ -173,12 +172,13 @@
 
     .sectionText {
         line-height: 1.5;
+        max-width: 31rem;
     }
 
     /*  */
 
     #header {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     #headerMessageContainer {
@@ -209,13 +209,24 @@
 
     /*  */
 
+    #aboutMe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     #aboutMeMessageContainer {
-        /* text-align: center; */
-        margin-bottom: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+        max-width: 31rem;
+        min-width: 19rem;
     }
 
     #aboutMeImageContainer {
         position: relative;
+        max-width: 31rem;
+        min-width: 19rem;
     }
 
     #aboutMeImage {
@@ -251,8 +262,23 @@
         content: var(--fontAwesome-heart);
     }
 
+    /*  */
+
+    #skills {
+        background-color: pink;
+    }
 
 
+    @media (min-width: 56rem) {
+
+        #aboutMe {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+
+    }
 
 
 

@@ -231,7 +231,7 @@
     }
 
 
-    @media (min-width: 900px) {
+    @media (min-width: 56rem) {
 
         .menuContainer {
             display: flex;
