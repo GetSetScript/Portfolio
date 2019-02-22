@@ -1,14 +1,14 @@
 <template>
     <section id="skills" class="section">
-        <h2 id="skillsHeader" class="sectionHeader">What technology do I work with?</h2>
+        <h2 id="skillsHeader">What technology do I work with?</h2>
         <div>
             <div id="skillsMessageContainer">
                 <h3>Javascript</h3>
-                <p class="sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                     Eos ad exercitationem dolorem adipisci? Eaque corrupti 
                     repudiandae unde maxime ipsum architecto.
                 </p>
-                <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Officiis fugit praesentium minima dolore et nobis 
                     repudiandae a sunt cupiditate commodi excepturi ex 
                     delectus, nulla quia veritatis omnis 

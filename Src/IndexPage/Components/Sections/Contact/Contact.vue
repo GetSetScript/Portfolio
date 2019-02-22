@@ -1,12 +1,12 @@
 <template>
     <section id="contactMe" class="section">
         <div id="contactMessageContainer">
-            <h2 id="contactHeader" class="sectionHeader">Contact Me</h2>
-            <h3 class="contactText sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            <h2 id="contactHeader">Contact Me</h2>
+            <h3 class="contactText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Eos ad exercitationem dolorem adipisci? Eaque corrupti 
                 repudiandae unde maxime ipsum architecto.
             </h3>
-            <p class="contactText sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <p class="contactText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Officiis fugit praesentium minima dolore et nobis 
                 repudiandae a sunt cupiditate commodi excepturi ex 
                 delectus, nulla quia veritatis omnis 

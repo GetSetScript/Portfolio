@@ -1,14 +1,14 @@
 <template>
     <section id="skills" class="section">
-        <h2 id="skillsHeader" class="sectionHeader">What technologies do I work with?</h2>
+        <h2 id="skillsHeader">What technologies do I work with?</h2>
         <nav id="skillsNav">
             <span id="left" class="menuArrow" v-on:click="skillCycle(-1)"></span>
             <h3 id="skillsLabel">{{label}}</h3>
             <span id="right" class="menuArrow" v-on:click="skillCycle(1)"></span>
         </nav>
         <div id="skillsMessageContainer">
-            <p class="sectionText">{{paragraph1}}</p>
-            <p class="sectionText">{{paragraph2}}</p>
+            <p>{{paragraph1}}</p>
+            <p>{{paragraph2}}</p>
             <img id="skillsImage" v-bind:src="imageUrl" alt="">
         </div>
     </section>
