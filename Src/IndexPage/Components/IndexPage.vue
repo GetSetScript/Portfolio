@@ -29,18 +29,19 @@
 
         <work-section></work-section>
 
-        <aside>
-            <i></i>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        <aside id="socialMedia">
+            <p id="socialMediaText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Voluptates pariatur reprehenderit accusamus, aspernatur 
                 nobis dolorum. Accusantium consequatur quasi 
                 temporibus corrupti!
             </p>
-            <p>lorem ipsum dolor</p>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <div id="socialMediaIconContainer">
+                <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
+                <a href="https://www.twitch.tv/getsetscript" target="_blank"><span id="twitch" class="socialMediaIcon"></span></a>
+                <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
+                <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
+            </div>
+            
         </aside>
 
         <section class="section">
@@ -187,8 +188,6 @@
             transform: rotate(0deg);
         }
 
-    /*  */
-
     #aboutMeSecret {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
@@ -202,6 +201,56 @@
     }
 
     /*  */
+
+    #socialMedia {
+        background-color: var(--color-blue);
+        padding: 2rem;
+    }
+
+    #socialMediaText {
+        max-width: 31rem;
+        margin: 0 auto 1rem;
+        text-align: center;
+    }
+
+    #socialMediaIconContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #socialMediaIconContainer a:link {
+        text-decoration: none;
+    }
+
+    .socialMediaIcon {
+        font-family: var(--font-family-fontAwesome-brands);
+        font-weight: var(--font-weight-fontAwesome-solid);
+        font-size: 2rem;
+    }
+
+    #youtube::before {
+        content: var(--fontAwesome-youtube);
+        color: red;
+    }
+
+    #twitch::before {
+        content: var(--fontAwesome-twitch);
+        color: purple;
+    }
+
+    #twitter::before {
+        content: var(--fontAwesome-twitter);
+        color: blue;
+    }
+
+    #github::before {
+        content: var(--fontAwesome-github);
+        color: black;
+    }
+
+    /*  */
+
 
 
     @media (min-width: 56rem) {

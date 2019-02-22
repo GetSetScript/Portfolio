@@ -1,19 +1,11 @@
 :root {
 
-    --fontAwesome-light: "\f0eb";
-    --fontAwesome-computer: "\f108";
-    --fontAwesome-rocket: "\f135";
     --fontAwesome-twitter: "\f099";
-    --fontAwesome-facebook: "\f39e";
-    --fontAwesome-google: "\f1a0";
-    --fontAwesome-linkedin: "\f0e1";
-    --fontAwesome-tint: "\f043";
+    --fontAwesome-youtube: "\f167";
+    --fontAwesome-twitch: "\f1e8";
+    --fontAwesome-github: "\f09b";
     --fontAwesome-paper-plane: "\f1d8";
     --fontAwesome-heart: "\f004";
-    --fontAwesome-angle-left: "\f104";
-    --fontAwesome-angle-right: "\f105";
-    --fontAwesome-retweet: "\f079";
-    --fontAwesome-heart: "\f004";
     --fontAwesome-leftArrow: "\f104";
-    --fontAwesome-rightArrow: "\f105"
+    --fontAwesome-rightArrow: "\f105";
 }
