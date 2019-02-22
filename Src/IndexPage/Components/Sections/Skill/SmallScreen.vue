@@ -1,6 +1,6 @@
 <template>
     <section id="skills" class="section">
-        <h2 id="skillsHeader">What technologies do I work with?</h2>
+        <h2>What technologies do I work with?</h2>
         <nav id="skillsNav">
             <span id="left" class="menuArrow" v-on:click="skillCycle(-1)"></span>
             <h3 id="skillsLabel">{{label}}</h3>

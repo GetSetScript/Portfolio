@@ -80,12 +80,15 @@
         height: 100%;
         padding: 0 1rem;
         background-color: var(--color-background-workGridBoxDetails);
-        color: var(--color-text-workGridBoxDetails);
         opacity: 0;
 
         transition-duration: 1s;
         transition-property: opacity;
         transition-delay: .2s;
+    }
+
+    .details * {
+        color: var(--color-text-workGridBoxDetails);
     }
 
     /* animate grid hover effects */
