@@ -2,7 +2,7 @@
   <div id="pageWrapper">
     <header id="header">
         <navigation-bar></navigation-bar>
-        <h1 id="headerMessage">{ get; set; } Script!</h1>
+        <h1 id="headerTitle">{ get; set; } Script!</h1>
     </header>
 
     <main id="mainContentWrapper">
@@ -121,11 +121,11 @@
         height: 100vh;
     }
 
-    #headerMessage {
+    #headerTitle {
         font-size: 3rem;
         text-align: center;
         text-transform: uppercase;
-        color: var(--color-text-lightest);
+        color: var(--color-text-headerTitle);
         padding-top: 20vh;
     }
 
@@ -140,7 +140,7 @@
 
     #aboutMe.section {
         padding-bottom: 6rem;
-        background-color: var(--color-background-aboutMe);
+        background-color: var(--color-background-aboutMeSection);
     }
 
     #aboutMeMessageContainer {
@@ -161,8 +161,8 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(13deg);
-        border: .5rem solid var(--color-profile-border);
-        border-bottom: 3rem solid var(--color-profile-border);
+        border: .5rem solid var(--color-border-aboutMeImage);
+        border-bottom: 3rem solid var(--color-border-aboutMeImage);
         box-shadow: 3px 5px 11px 3px rgb(199, 139, 71);
     }
 
@@ -177,7 +177,7 @@
     #aboutMeSecret {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
-        color: var(--color-heart);
+        color: var(--color-fontAwesome-aboutMeSecret);
         font-size: 1.5rem;
         margin-left: 2.8rem;
     }
@@ -189,7 +189,7 @@
     /*  */
 
     #socialMedia {
-        background-color: var(--color-blue);
+        background-color: var(--color-background-socialMediaSection);
         padding: 2rem;
     }
 
@@ -205,10 +205,6 @@
         justify-content: space-evenly;
     }
 
-    #socialMediaIconContainer a:link {
-        text-decoration: none;
-    }
-
     .socialMediaIcon {
         font-family: var(--font-family-fontAwesome-brands);
         font-weight: var(--font-weight-fontAwesome-solid);
@@ -217,22 +213,22 @@
 
     #youtube::before {
         content: var(--fontAwesome-youtube);
-        color: red;
+        color: var(--color-fontAwesome-youtube);
     }
 
     #twitch::before {
         content: var(--fontAwesome-twitch);
-        color: purple;
+        color: var(--color-fontAwesome-twitch);
     }
 
     #twitter::before {
         content: var(--fontAwesome-twitter);
-        color: blue;
+        color: var(--color-fontAwesome-twitter);
     }
 
     #github::before {
         content: var(--fontAwesome-github);
-        color: black;
+        color: var(--color-fontAwesome-github);
     }
 
     /*  */

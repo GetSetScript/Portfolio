@@ -44,7 +44,7 @@
 <style scoped>
 
     #work {
-        background-color: var(--color-pink);
+        background-color: var(--color-background-workSection);
         text-align: center;
     }
 
@@ -79,8 +79,8 @@
         width: 100%;
         height: 100%;
         padding: 0 1rem;
-        background-color: black;
-        color: white;
+        background-color: var(--color-background-workGridBoxDetails);
+        color: var(--color-text-workGridBoxDetails);
         opacity: 0;
 
         transition-duration: 1s;

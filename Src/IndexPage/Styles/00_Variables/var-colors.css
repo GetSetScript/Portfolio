@@ -1,0 +1,17 @@
+:root {
+
+    --color-text-headerTitle: var(--color-text-lightest);
+
+    --color-background-aboutMeSection: var(--color-orange);
+    --color-border-aboutMeImage: var(--color-text-light);
+    --color-fontAwesome-aboutMeSecret: firebrick;
+
+    --color-background-socialMediaSection: var(--color-blue);
+
+    --color-fontAwesome-skillSelectionArrow: red;
+
+    --color-background-workSection: var(--color-pink);
+    --color-background-workGridBoxDetails: black;
+    --color-text-workGridBoxDetails: white;
+
+}

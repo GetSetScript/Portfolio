@@ -78,7 +78,7 @@
     .menuArrow {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
-        color: red;
+        color: var(--color-fontAwesome-skillSelectionArrow);
         font-size: 2rem;
         width: 100%;
         cursor: pointer;

@@ -1,6 +1,6 @@
 :root {
     
-    /* text */
+    /* text colors */
 
     --color-text-lightest: #f6d3bd;
     --color-text-light: #d3d3d3;
@@ -8,7 +8,7 @@
     --color-text-dark: #38200a;
 
 
-    /* background */
+    /* background colors */
 
     --color-background-dark: #0b0816;
     --color-background-dark-hover: #112131;
@@ -17,25 +17,34 @@
 
     /* main colors */
 
-    --color-blue: #7cd0f4;
-    --color-green: #7dcec8;
-    --color-purple: #c39eca;
-    /* --color-pink: #f9bac3; */
-    --color-pink: #e96935;
-    /* --color-orange: #faae7a; */
+    --color-logo-blue: #7cd0f4;
+    --color-logo-green: #7dcec8;
+    --color-logo-purple: #c39eca;
+    --color-logo-pink: #f9bac3;
+    --color-logo-orange: #faae7a;
+    --color-logo-yellow: #ecec7a;
+    
+    
     --color-orange: #eda25e;
-    --color-yellow: #ecec7a;
+    --color-pink: #e96935;
 
+    /* font awesome brands */
 
-    --color-background-aboutMe: var(--color-orange);
+    --color-fontAwesome-youtube: red;
+    --color-fontAwesome-twitch: purple;
+    --color-fontAwesome-twitter: blue;
+    --color-fontAwesome-github: black;
 
+    /* base colors of base-tags.css */
 
-    /* border color */
+    --color-text-body: var(--color-text-darkest);
+    --color-text-paragraph: var(--color-text-dark);
 
-    --color-menu-border: #252525;
-    --color-profile-border: var(--color-text-light);
+    /* navigation colors */
 
-
-    /* font awesome color */
-    --color-heart: firebrick;
+    --color-background-navMenu: var(--color-background-dark);
+    --color-hamburgerMenu: var(--color-background-light);
+    --color-border-navMenu: #252525;
+    --color-text-navMenu: var(--color-text-lightest);
+    --color-background-hover-navMenu: var(--color-background-dark-hover);
 }
