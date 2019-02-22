@@ -94,10 +94,11 @@
 
     #skillsMessageContainer {
         max-width: 31rem;
+        min-height: 17rem;
     }
 
     #skillsMessageContainer > p {
-        text-align: left;
+        text-align: center;
     }
 
     @media (min-width: 56rem) {

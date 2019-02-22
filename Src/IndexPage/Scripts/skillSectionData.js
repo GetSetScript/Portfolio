@@ -13,7 +13,9 @@ export default [
     },
     {
         label: "CSS",
-        paragraph1: `lorem dkdks sjsjsk kdkdlsldsk`,
+        paragraph1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Officiis fugit praesentium minima dolore et nobis 
+                repudiandae`,
         paragraph2: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Officiis fugit praesentium minima dolore et nobis 
                 repudiandae a sunt cupiditate commodi excepturi ex 
