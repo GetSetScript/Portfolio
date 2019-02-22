@@ -88,7 +88,7 @@
 <style scoped>
 
     .section {
-        padding: 2rem 2.5rem;
+        padding: 3rem 2.5rem;
     }
 
     /*  */
@@ -170,7 +170,7 @@
 
     #socialMedia {
         background-color: var(--color-background-socialMediaSection);
-        padding: 2rem;
+        padding: 3rem;
     }
 
     #socialMediaText {
