@@ -1,15 +1,15 @@
 <template>
-  <div id="pageWrapper">
+  <div>
     <header id="header">
         <navigation-bar></navigation-bar>
         <h1 id="headerTitle">{ get; set; } Script!</h1>
     </header>
 
-    <main id="mainContentWrapper">
+    <main>
         <section id="aboutMe" class="section">
             <div id="aboutMeMessageContainer">
-                <h2 class="sectionHeader">I am Terra Vermillion</h2>
-                <p class="sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <h2>I am Terra Vermillion</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Officiis fugit praesentium minima dolore et nobis 
                     repudiandae a sunt cupiditate commodi excepturi ex 
                     delectus, nulla quia veritatis omnis 
@@ -87,27 +87,8 @@
 
 <style scoped>
 
-    #pageWrapper {
-
-    }
-
-    #mainContentWrapper {
-
-    }
-
-    /*  */
-
     .section {
         padding: 2rem 2.5rem;
-    }
-
-    .sectionHeader {
-        text-transform: uppercase;
-    }
-
-    .sectionText {
-        line-height: 1.5;
-        max-width: 31rem;
     }
 
     /*  */
@@ -146,7 +127,6 @@
     #aboutMeMessageContainer {
         text-align: right;
         padding-left: 1rem;
-        max-width: 31rem;
         min-width: 19rem;
     }
 
@@ -194,7 +174,6 @@
     }
 
     #socialMediaText {
-        max-width: 31rem;
         margin: 0 auto 1rem;
         text-align: center;
     }

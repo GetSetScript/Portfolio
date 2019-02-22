@@ -92,10 +92,6 @@
         content: var(--fontAwesome-rightArrow);
     }
 
-    #skillsMessageContainer {
-        max-width: 31rem;
-    }
-
     #skillsMessageContainer > p {
         text-align: center;
     }
