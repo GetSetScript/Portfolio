@@ -70,12 +70,15 @@
     }
 
     .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 25% 2rem;
+        padding: 0 1rem;
         background-color: black;
         color: white;
         opacity: 0;
