@@ -1,8 +1,8 @@
 <template>
-    <section id="skills" class="section">
-        <h2 id="skillsHeader">What technology do I work with?</h2>
+    <section id="skill" class="section">
+        <h2 id="skillHeader">What technology do I work with?</h2>
         <div>
-            <div id="skillsMessageContainer">
+            <div id="skillMessageContainer">
                 <h3>Javascript</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                     Eos ad exercitationem dolorem adipisci? Eaque corrupti 
@@ -15,8 +15,8 @@
                     voluptatum saepe quidem.
                 </p>
             </div>
-            <div id="skillsTreeContainer">
-                <div id="skillsTreeMenu">
+            <div id="skillTreeContainer">
+                <div id="skillTreeMenu">
                     <h3>Front End</h3>
                     <h3>Back End</h3>
                     <h3>Design</h3>
@@ -39,11 +39,11 @@
 
 <style scoped>
 
-    #skillsHeader {
+    #skillHeader {
         text-align: center;
     }
 
-    #skillsTreeMenu {
+    #skillTreeMenu {
         display: flex;
         flex-direction: row;
         text-align: center;
