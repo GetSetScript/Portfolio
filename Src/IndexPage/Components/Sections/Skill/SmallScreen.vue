@@ -42,7 +42,7 @@
                 this.label = skillsSectionData[this.skillIndex].label;
                 this.paragraph1 = skillsSectionData[this.skillIndex].paragraph1;
                 this.paragraph2 = skillsSectionData[this.skillIndex].paragraph2;
-                this.imageUrl = skillSectionData[this.skillIndex].imageUrl;
+                this.imageUrl = skillsSectionData[this.skillIndex].imageUrl;
             }
         }
     }
