@@ -41,30 +41,12 @@
                 <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
                 <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
             </div>
+
             
         </aside>
 
-        <section id="contactMe" class="section">
-            <div id="contactMessageContainer">
-                <h2 id="contactHeader" class="sectionHeader">Contact Me</h2>
-                <h3 class="contactText sectionText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Eos ad exercitationem dolorem adipisci? Eaque corrupti 
-                    repudiandae unde maxime ipsum architecto.
-                </h3>
-                <p class="contactText sectionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Officiis fugit praesentium minima dolore et nobis 
-                    repudiandae a sunt cupiditate commodi excepturi ex 
-                    delectus, nulla quia veritatis omnis 
-                    voluptatum saepe quidem.
-                </p>
-            </div>
-            <form id="contactForm" action="">
-                <input id="contactFormName" type="text">
-                <input id="contactFormEmail" type="text">
-                <textarea id="contactFormMessage" name="" cols="30" rows="10"></textarea>
-                <button id="contactFormSend"><i></i>Send Message</button>
-            </form>
-        </section>
+        <contact-section></contact-section>
+        
     </main>
 
     <footer>
@@ -77,7 +59,8 @@
   import Navigation from "./../../Global/Components/Navigation.vue";
   import SkillSectionLargeScreen from "./Sections/Skill/LargeScreen.vue";
   import SkillSectionSmallScreen from "./Sections/Skill/SmallScreen.vue";
-  import WorkSection from "./Sections/Work/WorkSection.vue";
+  import WorkSection from "./Sections/Work/Work.vue";
+  import ContactSection from "./Sections/Contact/Contact.vue"
 
   export default {
     name: "app",
@@ -85,7 +68,8 @@
       "navigation-bar": Navigation,
       "skill-section-large": SkillSectionLargeScreen,
       "skill-section-small": SkillSectionSmallScreen,
-      "work-section": WorkSection
+      "work-section": WorkSection,
+      "contact-section": ContactSection
     },
     data() {
         return {
@@ -253,21 +237,6 @@
 
     /*  */
 
-    #contact {
-
-    }
-
-    #contactMessageContainer {
-
-    }
-
-    #contactHeader {
-
-    }
-
-    #contactForm {
-
-    }
 
     @media (min-width: 56rem) {
 
