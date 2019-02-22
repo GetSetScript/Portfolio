@@ -94,7 +94,6 @@
 
     #skillsMessageContainer {
         max-width: 31rem;
-        min-height: 17rem;
     }
 
     #skillsMessageContainer > p {
