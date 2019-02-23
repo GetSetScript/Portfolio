@@ -1,50 +1,21 @@
 :root {
     
-    /* text colors */
+    --color-text-dark-primary: #303030;
+    --color-text-dark-secondary: #5c5c5c;
+    --color-text-light-primary: #fbfbf2;
+    --color-text-light-secondary: #f5f5cd;
 
-    --color-text-lightest: #f6d3bd;
-    --color-text-light: #d3d3d3;
-    --color-text-darkest: #3a3a3a;
-    --color-text-dark: #38200a;
+    --color-floralWhite: #fbfbf2;
 
-
-    /* background colors */
-
-    --color-background-dark: #0b0816;
-    --color-background-dark-hover: #112131;
-    --color-background-light: #d3d3d3;
-
-
-    /* main colors */
-
-    --color-logo-blue: #7cd0f4;
-    --color-logo-green: #7dcec8;
-    --color-logo-purple: #c39eca;
-    --color-logo-pink: #f9bac3;
-    --color-logo-orange: #faae7a;
-    --color-logo-yellow: #ecec7a;
-    
-    
-    --color-orange: #eda25e;
-    --color-pink: #e96935;
+    --color-japaneseIndigo: #264653;
+    --color-japaneseIndigo2: #122637;
+    --color-portlandOrange: #f2461c;
 
     /* font awesome brands */
 
-    --color-fontAwesome-youtube: red;
-    --color-fontAwesome-twitch: purple;
-    --color-fontAwesome-twitter: blue;
-    --color-fontAwesome-github: black;
+    --color-fontAwesome-youtube: #d8150e;
+    --color-fontAwesome-twitch: rgb(190, 35, 190);
+    --color-fontAwesome-twitter: rgb(56, 108, 252);
+    --color-fontAwesome-github: rgb(10, 10, 10);
 
-    /* base colors of base-tags.css */
-
-    --color-text-body: var(--color-text-darkest);
-    --color-text-paragraph: var(--color-text-dark);
-
-    /* navigation colors */
-
-    --color-background-navMenu: var(--color-background-dark);
-    --color-hamburgerMenu: var(--color-background-light);
-    --color-border-navMenu: #252525;
-    --color-text-navMenu: var(--color-text-lightest);
-    --color-background-hover-navMenu: var(--color-background-dark-hover);
 }

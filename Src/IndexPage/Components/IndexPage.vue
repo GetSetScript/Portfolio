@@ -29,28 +29,21 @@
 
         <work-section></work-section>
 
-        <aside id="socialMedia">
-            <p id="socialMediaText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Voluptates pariatur reprehenderit accusamus, aspernatur 
-                nobis dolorum. Accusantium consequatur quasi 
-                temporibus corrupti!
-            </p>
-            <div id="socialMediaIconContainer">
-                <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
-                <a href="https://www.twitch.tv/getsetscript" target="_blank"><span id="twitch" class="socialMediaIcon"></span></a>
-                <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
-                <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
-            </div>
-
-            
-        </aside>
-
         <contact-section></contact-section>
-        
     </main>
 
-    <footer>
-        
+    <footer id="socialMedia">
+        <p id="socialMediaText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Voluptates pariatur reprehenderit accusamus, aspernatur 
+            nobis dolorum. Accusantium consequatur quasi 
+            temporibus corrupti!
+        </p>
+        <div id="socialMediaIconContainer">
+            <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
+            <a href="https://www.twitch.tv/getsetscript" target="_blank"><span id="twitch" class="socialMediaIcon"></span></a>
+            <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
+            <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
+        </div>
     </footer>
   </div>
 </template>
@@ -95,6 +88,7 @@
 
     #header {
         background-image: url("./../Assets/Images/header2.png");
+                          
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -117,11 +111,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    #aboutMe.section {
         padding-bottom: 6rem;
         background-color: var(--color-background-aboutMeSection);
+        border-top: .5rem solid var(--color-border-aboutMeSection);
     }
 
     #aboutMeMessageContainer {
@@ -143,7 +135,7 @@
         transform: rotate(13deg);
         border: .5rem solid var(--color-border-aboutMeImage);
         border-bottom: 3rem solid var(--color-border-aboutMeImage);
-        box-shadow: 3px 5px 11px 3px rgb(199, 139, 71);
+        box-shadow: 3px 5px 11px 3px var(--color-shadow-aboutMeImage);
     }
 
     /* animate about me image rotation */
@@ -171,6 +163,7 @@
     #socialMedia {
         background-color: var(--color-background-socialMediaSection);
         padding: 3rem;
+        border-top: .5rem solid var(--color-border-socialMediaSection);
     }
 
     #socialMediaText {

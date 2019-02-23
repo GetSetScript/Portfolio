@@ -47,6 +47,7 @@
         background-color: var(--color-background-workSection);
         text-align: center;
         padding-bottom: 5rem;
+        border-top: .5rem solid var(--color-border-workSection);
     }
 
     #workGridContainer {

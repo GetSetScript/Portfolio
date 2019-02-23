@@ -55,6 +55,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: var(--color-japaneseIndigo2);
     }
 
     #skillImage {
