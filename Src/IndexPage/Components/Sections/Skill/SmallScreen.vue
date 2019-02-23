@@ -55,7 +55,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--color-japaneseIndigo2);
+        background-color: var(--color-japaneseIndigo-dark);
+        color: var(--color-text-light-primary);
+    }
+
+    #skill p {
+        color: var(--color-text-light-secondary);
     }
 
     #skillImage {
@@ -69,6 +74,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 1rem 0;
     }
 
@@ -79,7 +85,7 @@
     .menuArrow {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
-        color: var(--color-fontAwesome-skillSelectionArrow);
+        color: var(--color-portlandOrange);
         font-size: 2rem;
         width: 100%;
         cursor: pointer;

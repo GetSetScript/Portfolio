@@ -100,7 +100,7 @@
         font-size: 3rem;
         text-align: center;
         text-transform: uppercase;
-        color: var(--color-text-headerTitle);
+        color: var(--color-floralWhite);
         padding-top: 20vh;
     }
 
@@ -112,8 +112,7 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 6rem;
-        background-color: var(--color-background-aboutMeSection);
-        border-top: .5rem solid var(--color-border-aboutMeSection);
+        border-top: .5rem solid var(--color-japaneseIndigo-light);
     }
 
     #aboutMeMessageContainer {
@@ -133,9 +132,8 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(13deg);
-        border: .5rem solid var(--color-border-aboutMeImage);
-        border-bottom: 3rem solid var(--color-border-aboutMeImage);
-        box-shadow: 3px 5px 11px 3px var(--color-shadow-aboutMeImage);
+        border: .5rem solid var(--color-wheat);
+        box-shadow: 3px 5px 11px 3px var(--color-shadow-light);
     }
 
     /* animate about me image rotation */
@@ -149,7 +147,7 @@
     #aboutMeSecret {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
-        color: var(--color-fontAwesome-aboutMeSecret);
+        color: var(--color-portlandOrange);
         font-size: 1.5rem;
         margin-left: 2.8rem;
     }
@@ -161,9 +159,9 @@
     /*  */
 
     #socialMedia {
-        background-color: var(--color-background-socialMediaSection);
         padding: 3rem;
-        border-top: .5rem solid var(--color-border-socialMediaSection);
+        border-top: .5rem solid var(--color-japaneseIndigo-light);
+        background-color: var(--color-wheat);
     }
 
     #socialMediaText {
@@ -175,6 +173,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        max-width: 31rem;
+
+        margin: 0 auto 1rem;
+        text-align: center;
     }
 
     .socialMediaIcon {

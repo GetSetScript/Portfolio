@@ -31,7 +31,7 @@
                 menuNav: {
                     isAnimated: true,
                     isOpen: false,
-                    animationDelay: 400
+                    animationDelay: 500
                 },
                 mediaQueryBreakPoint: 900
             }
@@ -118,7 +118,7 @@
 <style scoped>
 
     .menuContainer {
-        background-color: var(--color-background-navMenu);
+        background-color: var(--color-japaneseIndigo-light);
         position: fixed;
         z-index: 500;
         width: 100%;
@@ -147,7 +147,7 @@
     }
 
     .menuToggle div {
-        background-color: var(--color-hamburgerMenu);
+        background-color: var(--color-offWhite);
         height: calc(26rem / var(--size-hamburgerMenuSize));
         width: calc(180rem / var(--size-hamburgerMenuSize));
         margin: calc(31rem / var(--size-hamburgerMenuSize)) 0;
@@ -201,14 +201,14 @@
     /*  */
 
     .menuNav li {
-        border-bottom: 1px solid var(--color-border-navMenu);
+        border-bottom: 1px solid #3e575a;
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
 
     .menuNav li:first-child {
-        border-top: 1px solid var(--color-border-navMenu);
+        border-top: 1px solid #3e575a;
     }
 
     .menuNav li:last-child {
@@ -216,17 +216,17 @@
     }
 
     .menuNav a:link {
-        color: var(--color-text-navMenu);
+        color: var(--color-text-light-secondary);
         width: 100%;
         display: inline-block;
     }
 
     .menuNav a:hover {
-        background-color: var(--color-background-hover-navMenu);
+        background-color: var(--color-japaneseIndigo-dark);
     }
 
     .menuNav a:visited {
-        color: var(--color-text-navMenu);
+        color: var(--color-text-light-secondary);
     }
 
 

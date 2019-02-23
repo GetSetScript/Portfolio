@@ -28,13 +28,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--color-japaneseIndigo2);
+        background-color: var(--color-japaneseIndigo-dark);
+        color: var(--color-text-light-primary);
     }
 
     #contactMessageContainer {
         text-align: center;
         max-width: 31rem;
         padding: 0 1rem;
+    }
+
+    #contactMessageContainer p {
+        color: var(--color-text-light-secondary);
     }
 
     #contactForm {
@@ -51,8 +56,8 @@
     #contactFormSend {
         outline: none;
         border: none;
-        background-color: var(--color-background-contactFormSend);
-        color: var(--color-text-contactFormSend);
+        background-color: var(--color-portlandOrange);
+        color: var(--color-text-light-primary);
     }
 
     #sendIcon {

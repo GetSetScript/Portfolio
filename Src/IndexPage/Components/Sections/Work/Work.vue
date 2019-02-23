@@ -44,15 +44,14 @@
 <style scoped>
 
     #work {
-        background-color: var(--color-background-workSection);
         text-align: center;
         padding-bottom: 5rem;
-        border-top: .5rem solid var(--color-border-workSection);
+        border-top: .5rem solid var(--color-japaneseIndigo-light);
     }
 
     #workGridContainer {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-gap: 1rem;
         grid-auto-rows: minmax(240px, 1fr);
     }
@@ -60,6 +59,7 @@
     .gridBox {
         position: relative;
         overflow: hidden;
+        border: .15rem solid var(--color-japaneseIndigo-light);
     }
 
     .gridBox img {
@@ -81,7 +81,7 @@
         width: 100%;
         height: 100%;
         padding: 0 1rem;
-        background-color: var(--color-background-workGridBoxDetails);
+        background-color: var(--color-wheat);
         opacity: 0;
 
         transition-duration: 1s;
@@ -90,7 +90,7 @@
     }
 
     .details * {
-        color: var(--color-text-workGridBoxDetails);
+        color: var(--color-text-dark-primary);
     }
 
     /* animate grid hover effects */
@@ -100,7 +100,7 @@
         }
 
         .gridBox:hover .details {
-            opacity: .9;
+            opacity: .97;
         }
 
 </style>
