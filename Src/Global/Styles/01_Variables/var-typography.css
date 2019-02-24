@@ -1,7 +1,7 @@
 :root {
     /* base font family */
-    --font-family-primary: 'Raleway', 'Arial', sans-serif;
-    --font-family-secondary: 'Montserrat', 'Arial' sans-serif;
+    --font-family-primary: 'Merienda', 'Georgia', cursive;
+    --font-family-secondary: 'Roboto', 'Verdana', sans-serif;
 
     /* font awesome font family */
     --font-family-fontAwesome: "Font Awesome 5 Free";

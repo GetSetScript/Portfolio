@@ -97,7 +97,7 @@
     }
 
     #headerTitle {
-        font-size: 3rem;
+        font-size: 5rem;
         text-align: center;
         text-transform: uppercase;
         color: var(--color-floralWhite);
