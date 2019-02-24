@@ -7,6 +7,7 @@
                 <div class="details">
                     <h3>Some Title</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
+                    <a href="#">View Project</a>
                 </div>
             </div>
             <div class="gridBox">
@@ -14,6 +15,7 @@
                 <div class="details">
                     <h3>Some Title</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
+                    <a href="#">View Project</a>
                 </div>
             </div>
             <div class="gridBox">
@@ -21,6 +23,7 @@
                 <div class="details">
                     <h3>Some Title</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
+                    <a href="#">View Project</a>
                 </div>
             </div>
             <div class="gridBox">
@@ -28,6 +31,7 @@
                 <div class="details">
                     <h3>Some Title</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
+                    <a href="#">View Project</a>
                 </div>
             </div>
         </div>
@@ -84,13 +88,21 @@
         background-color: var(--color-wheat);
         opacity: 0;
 
-        transition-duration: 1s;
-        transition-property: opacity;
+        transition-duration: .4s;
         transition-delay: .2s;
+        transition-property: opacity;
     }
 
-    .details * {
-        color: var(--color-text-dark-primary);
+    .details p {
+        color: var(--color-text-dark-secondary);
+    }
+
+    .details a {
+        background-color: var(--color-portlandOrange);
+        padding: .5rem;
+        color: var(--color-floralWhite);
+        width: 50%;
+        margin: 0 auto;
     }
 
     /* animate grid hover effects */
