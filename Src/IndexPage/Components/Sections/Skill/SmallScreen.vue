@@ -9,7 +9,7 @@
         <div id="skillMessageContainer">
             <p>{{paragraph1}}</p>
             <p>{{paragraph2}}</p>
-            <img id="skillImage" v-bind:src="imageUrl" alt="">
+            <img id="skillImage" v-bind:src="imageUrl" v-bind:alt="imageDescription">
         </div>
     </section>
 </template>
@@ -24,6 +24,7 @@
                 paragraph1: skillSectionData[0].paragraph1,
                 paragraph2: skillSectionData[0].paragraph2,
                 imageUrl: skillSectionData[0].imageUrl,
+                imageDescription: skillSectionData[0].imageDescription,
                 skillIndex: 0
             }
         },
@@ -43,6 +44,7 @@
                 this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
                 this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
                 this.imageUrl = skillSectionData[this.skillIndex].imageUrl;
+                this.imageDescription = skillSectionData[this.skillIndex].imageDescription;
             }
         }
     }

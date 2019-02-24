@@ -9,7 +9,8 @@
         <section id="aboutMe" class="section">
             <div id="aboutMeMessageContainer">
                 <h2>I am Terra Vermillion</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Officiis fugit praesentium minima dolore et nobis 
                     repudiandae a sunt cupiditate commodi excepturi ex 
                     delectus, nulla quia veritatis omnis 
@@ -18,7 +19,7 @@
             </div>
             <div id="aboutMeImageContainer">
                 <span id="aboutMeSecret"></span>
-                <img src="./../Assets/Images/profile-pic.png" 
+                <img src="./../Assets/Images/profile-pic.jpg" 
                  alt="A profile picutre of a young woman holding a firework at sunset" 
                  id="aboutMeImage">
             </div>
@@ -87,7 +88,7 @@
     /*  */
 
     #header {
-        background-image: url("./../Assets/Images/hero-image.png");
+        background-image: url("./../Assets/Images/hero-image.jpg");
                           
         background-position: center;
         background-repeat: no-repeat;
