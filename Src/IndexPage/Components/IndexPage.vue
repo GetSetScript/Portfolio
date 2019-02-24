@@ -97,7 +97,8 @@
     }
 
     #headerTitle {
-        font-size: 5rem;
+        font-size: 3rem;
+        line-height: 1.5;
         text-align: center;
         text-transform: uppercase;
         color: var(--color-floralWhite);
@@ -210,6 +211,10 @@
 
     @media (min-width: 56rem) {
 
+        #headerTitle {
+            font-size: 4rem;
+        }
+
         #aboutMe {
             display: flex;
             flex-direction: row;
@@ -222,6 +227,14 @@
 
         #aboutMeSecret {
             font-size: 2rem;
+        }
+
+    }
+
+    @media (min-width: 84rem) {
+
+        #headerTitle {
+            font-size: 5rem;
         }
 
     }

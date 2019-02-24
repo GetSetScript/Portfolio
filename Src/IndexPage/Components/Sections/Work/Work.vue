@@ -1,6 +1,6 @@
 <template>
     <section id="work" class="section">
-        <h2>My Work</h2>
+        <h2 id="workHeader">My Work</h2>
         <div id="workGridContainer">
             <div class="gridBox">
                 <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80" alt="">
@@ -53,6 +53,10 @@
         border-top: .5rem solid var(--color-japaneseIndigo-light);
     }
 
+    #workHeader {
+        margin-bottom: 2rem;
+    }
+
     #workGridContainer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -95,6 +99,7 @@
 
     .details p {
         color: var(--color-text-dark-secondary);
+        margin-bottom: 1.5rem;
     }
 
     .details a {
