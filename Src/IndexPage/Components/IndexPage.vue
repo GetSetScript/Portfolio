@@ -87,7 +87,7 @@
     /*  */
 
     #header {
-        background-image: url("./../Assets/Images/header2.png");
+        background-image: url("./../Assets/Images/hero-image.png");
                           
         background-position: center;
         background-repeat: no-repeat;
