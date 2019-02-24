@@ -101,7 +101,7 @@
         text-align: center;
         text-transform: uppercase;
         color: var(--color-floralWhite);
-        padding-top: 20vh;
+        padding-top: 25vh;
     }
 
     /*  */

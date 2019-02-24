@@ -6,15 +6,15 @@
                 <div class="menuLineMiddle"></div>
                 <div class="menuLineEnd"></div>
         </div>
-        <a href="#">
+        <a href="#header">
             <img class="logo" src="./../Assets/Images/logo.png" alt="The site logo">
         </a>
          
         <ul class="menuNav" v-bind:class="menuNavClasses">
-            <a href="#"><li>What I do</li></a>
-            <a href="#"><li>About Me</li></a>
-            <a href="#"><li>My Works</li></a>
-            <a href="#"><li>Contact Me</li></a>
+            <a href="#aboutMe"><li>About Me</li></a>
+            <a href="#skill"><li>What I do</li></a>
+            <a href="#work"><li>My Work</li></a>
+            <a href="#contactMe"><li>Contact Me</li></a>
         </ul>
     </div>
 </template>
