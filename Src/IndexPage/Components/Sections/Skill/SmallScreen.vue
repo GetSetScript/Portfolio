@@ -8,8 +8,13 @@
         </nav>
         <div id="skillMessageContainer">
             <p>{{paragraph1}}</p>
-            <p>{{paragraph2}}</p>
-            <img id="skillImage" v-bind:src="imageUrl" v-bind:alt="imageDescription">
+            <div id="skillGrid">
+                <img class="skillImage" 
+                    v-for="image in images"
+                    v-bind:key="image.imageUrl" 
+                    v-bind:src="image.imageUrl" 
+                    v-bind:alt="image.imageDesctipion">
+            </div>
         </div>
     </section>
 </template>
@@ -23,8 +28,7 @@
                 label: skillSectionData[0].label,
                 paragraph1: skillSectionData[0].paragraph1,
                 paragraph2: skillSectionData[0].paragraph2,
-                imageUrl: skillSectionData[0].imageUrl,
-                imageDescription: skillSectionData[0].imageDescription,
+                images: skillSectionData[0].images,
                 skillIndex: 0
             }
         },
@@ -43,8 +47,7 @@
                 this.label = skillSectionData[this.skillIndex].label;
                 this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
                 this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
-                this.imageUrl = skillSectionData[this.skillIndex].imageUrl;
-                this.imageDescription = skillSectionData[this.skillIndex].imageDescription;
+                this.images = skillSectionData[this.skillIndex].images;
             }
         }
     }
@@ -62,6 +65,8 @@
     }
 
     #skillMessageContainer > p {
+        width: 100%;
+        margin: 0 auto;
         text-align: center;
         color: var(--color-text-light-secondary);
     }
@@ -70,12 +75,20 @@
         margin-bottom: 2rem;
     }
 
-    #skillImage {
+    #skillGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 200px));
+        grid-template-rows: repeat(2, minmax(100px, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .skillImage {
         height: 125px;
         width: auto;
         border-radius: 100%;
         border: .4rem solid var(--color-wheat);
         background-color: var(--color-floralWhite);
+        margin: 0 auto;
     }
 
     #skillNav {
@@ -114,6 +127,11 @@
 
         .menuArrow {
             font-size: 3rem;
+        }
+
+        #skillGrid {
+            grid-template-columns: repeat(4, minmax(100px, 200px));
+            grid-template-rows: 1fr;
         }
 
     }
