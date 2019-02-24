@@ -59,13 +59,21 @@
         color: var(--color-text-light-primary);
     }
 
-    #skill p {
+    #skillMessageContainer > p {
+        text-align: center;
         color: var(--color-text-light-secondary);
     }
 
+    #skillMessageContainer p:last-of-type {
+        margin-bottom: 2rem;
+    }
+
     #skillImage {
-        height: 100px;
+        height: 125px;
         width: auto;
+        border-radius: 100%;
+        border: .4rem solid var(--color-wheat);
+        background-color: var(--color-floralWhite);
     }
 
     #skillNav {
@@ -79,6 +87,7 @@
     }
 
     #skillLabel {
+        margin: 0;
         width: 100%;
     }
 
@@ -97,10 +106,6 @@
 
     .menuArrow#right::before {
         content: var(--fontAwesome-rightArrow);
-    }
-
-    #skillMessageContainer > p {
-        text-align: center;
     }
 
     @media (min-width: 56rem) {
