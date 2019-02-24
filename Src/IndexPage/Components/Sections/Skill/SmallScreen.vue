@@ -7,7 +7,7 @@
             <span id="right" class="menuArrow" v-on:click="skillCycle(1)"></span>
         </nav>
         <div id="skillMessageContainer">
-            <p>{{paragraph1}}</p>
+            <p>{{paragraph}}</p>
             <div id="skillGrid">
                 <img class="skillImage" 
                     v-for="image in images"
@@ -26,8 +26,7 @@
         data() {
             return {
                 label: skillSectionData[0].label,
-                paragraph1: skillSectionData[0].paragraph1,
-                paragraph2: skillSectionData[0].paragraph2,
+                paragraph: skillSectionData[0].paragraph,
                 images: skillSectionData[0].images,
                 skillIndex: 0
             }
@@ -45,8 +44,7 @@
                 }
 
                 this.label = skillSectionData[this.skillIndex].label;
-                this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
-                this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
+                this.paragraph = skillSectionData[this.skillIndex].paragraph;
                 this.images = skillSectionData[this.skillIndex].images;
             }
         }
@@ -57,29 +55,24 @@
 
     #skill {
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background-color: var(--color-japaneseIndigo-dark);
         color: var(--color-text-light-primary);
     }
 
-    #skillMessageContainer > p {
+    #skillMessageContainer {
         width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        color: var(--color-text-light-secondary);
     }
 
-    #skillMessageContainer p:last-of-type {
-        margin-bottom: 2rem;
+    #skillMessageContainer > p {
+        margin: 0 auto 2rem;
+        color: var(--color-text-light-secondary);
     }
 
     #skillGrid {
         display: grid;
         grid-template-columns: repeat(2, minmax(100px, 200px));
-        grid-template-rows: repeat(2, minmax(100px, 1fr));
         grid-gap: 1rem;
+        justify-content: center;
     }
 
     .skillImage {
@@ -92,18 +85,15 @@
     }
 
     #skillNav {
-        width: 100%;
-        max-width: 90%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 1rem 0;
     }
 
     #skillLabel {
         margin: 0;
-        width: 100%;
     }
 
     .menuArrow {
@@ -111,7 +101,6 @@
         font-weight: var(--font-weight-fontAwesome-solid);
         color: var(--color-portlandOrange);
         font-size: 2rem;
-        width: 100%;
         cursor: pointer;
     }
 
@@ -130,8 +119,7 @@
         }
 
         #skillGrid {
-            grid-template-columns: repeat(4, minmax(100px, 200px));
-            grid-template-rows: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
         }
 
     }
