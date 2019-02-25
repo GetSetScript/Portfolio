@@ -33,7 +33,6 @@
     }
 
     #contactMessageContainer {
-        text-align: center;
         max-width: 31rem;
         padding: 0 1rem;
     }
@@ -80,7 +79,6 @@
         }
 
         #contactMessageContainer {
-            text-align: right;
             max-width: 22rem;;
         }
 

@@ -67,8 +67,12 @@
     }
 
     #skillMessageContainer > p {
-        margin: 0 auto 2rem;
+        margin: 0 auto 1rem;
         color: var(--color-text-light-secondary);
+    }
+
+    #skillMessageContainer p:last-of-type {
+        margin-bottom: 2rem;
     }
 
     #skillGrid {

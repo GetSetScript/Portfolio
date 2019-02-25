@@ -1,23 +1,24 @@
 <template>
-  <div>
+  <div id="pageWrapper">
     <header id="header">
         <navigation-bar></navigation-bar>
         <h1 id="headerTitle">{ get; set; } Script!</h1>
     </header>
 
-    <main>
+    <main id="mainContent">
         <section id="aboutMe" class="section">
             <div id="aboutMeMessageContainer">
                 <h2>I am Terra Vermillion</h2>
                 <p>
-                    Hello, my name is Terra. I've been programming for two years now, and I've been doing web development for eight months. 
-                    I don't have a traditional education, just a highschool diploma. Instead I learned to program from my 
-                    husband (a professional) and all of the amazing resources you can find online these days. 
+                    Hello, my name is Terra. I've been programming for a year and a half now, 
+                    and I've been doing web development for six months. I don't have a college 
+                    education, instead I was mentored by my husband who is a professional software 
+                    developer and I learned from all of the amazing resources you can find online these days.
                 </p>
                 <p>
-                    I spend most of my time coding and watching tutorials, but otherwise I'll read, watch TV or go hiking. Programming 
-                    is special to me, it's not only a career but also something that I do just for fun. My life's goal is 
-                    to program something that changes the world, or at least a tiny part of it.
+                    I spend most of my time coding and watching tutorials, but otherwise I will read, watch TV or go hiking. Software Development
+                    is special to me, as it's not only a career but also something that I do just for fun. My life's goal is 
+                    to work on something that changes the world, or at least a tiny part of it.
                 </p>
             </div>
             <div id="aboutMeImageContainer">
@@ -28,7 +29,6 @@
             </div>
         </section>
 
-        <!-- <skill-section-large></skill-section-large> -->
         <skill-section-small></skill-section-small>
 
         <work-section></work-section>
@@ -53,8 +53,7 @@
 
 <script>
   import Navigation from "./../../Global/Components/Navigation.vue";
-  import SkillSectionLargeScreen from "./Sections/Skill/LargeScreen.vue";
-  import SkillSectionSmallScreen from "./Sections/Skill/SmallScreen.vue";
+  import SkillSectionSmallScreen from "./Sections/Skill/Skill.vue";
   import WorkSection from "./Sections/Work/Work.vue";
   import ContactSection from "./Sections/Contact/Contact.vue"
 
@@ -62,7 +61,6 @@
     name: "app",
     components: {
       "navigation-bar": Navigation,
-      "skill-section-large": SkillSectionLargeScreen,
       "skill-section-small": SkillSectionSmallScreen,
       "work-section": WorkSection,
       "contact-section": ContactSection
@@ -83,6 +81,20 @@
 
 <style scoped>
 
+    #pageWrapper {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    #header {
+        flex-grow: 1;
+    }
+
+    #mainContent {
+        flex-grow: 1;
+    }
+
     .section {
         padding: 3rem 2rem;
     }
@@ -90,8 +102,7 @@
     /*  */
 
     #header {
-        background-image: url("./../Assets/Images/hero-image.jpg");
-                          
+        background-image: url("./../Assets/Images/hero-image.jpg");           
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -120,7 +131,6 @@
     }
 
     #aboutMeMessageContainer {
-        text-align: right;
         padding-left: 1rem;
         min-width: 19rem;
     }
@@ -136,8 +146,10 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(13deg);
-        border: .5rem solid var(--color-wheat);
-        box-shadow: 3px 5px 11px 3px var(--color-shadow-light);
+        border: .3rem solid var(--color-wheat);
+        -webkit-box-shadow: 3px 5px 11px 3px #9facb8;;
+        -moz-box-shadow: 3px 5px 11px 3px #9facb8;;
+        box-shadow: 3px 5px 11px 3px #9facb8;;
     }
 
     /* animate about me image rotation */
@@ -170,7 +182,6 @@
 
     #socialMediaText {
         margin: 0 auto 1rem;
-        text-align: center;
     }
 
     #socialMediaIconContainer {
@@ -180,7 +191,6 @@
         max-width: 31rem;
 
         margin: 0 auto 1rem;
-        text-align: center;
     }
 
     .socialMediaIcon {

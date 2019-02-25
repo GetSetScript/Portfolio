@@ -122,17 +122,22 @@
         position: fixed;
         z-index: 500;
         width: 100%;
+        box-shadow: none;
+        -webkit-box-shadow: -1px 10px 22px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 10px 22px -4px rgba(0,0,0,0.75);
+        box-shadow: -1px 10px 22px -4px rgba(0,0,0,0.75);
     }
 
     /* animate menu bar fade in */
 
         .menuContainer.-animated {
             transition-duration: .5s;
-            transition-property: background-color;
+            transition-property: background-color, box-shadow;
         }
 
         .menuContainer.-transparent {
             background-color: transparent;
+            box-shadow: none;
         }
 
     /*  */
@@ -177,6 +182,7 @@
     .logo {
         height: 2rem;
         margin: .5rem 1rem;
+        text-align: right;
     }
 
     .menuNav {

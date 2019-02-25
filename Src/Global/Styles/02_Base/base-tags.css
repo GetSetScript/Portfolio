@@ -26,6 +26,7 @@
     color: var(--color-text-dark-secondary);
     line-height: 1.5;
     max-width: 31rem;
+    text-align: left;
   }
 
   a:link {

@@ -12,13 +12,11 @@
     --color-portlandOrange: #f2461c;
     --color-wheat: #F6D8AE;
 
-    --color-shadow-light: #9facb8;
-
     /* font awesome brands */
 
-    --color-fontAwesome-youtube: #d8150e;
-    --color-fontAwesome-twitch: rgb(190, 35, 190);
-    --color-fontAwesome-twitter: rgb(56, 108, 252);
-    --color-fontAwesome-github: rgb(10, 10, 10);
+    --color-fontAwesome-youtube: #c4302b;
+    --color-fontAwesome-twitch: #6441a5;
+    --color-fontAwesome-twitter: #1DA1F2;
+    --color-fontAwesome-github: #131313;
 
 }
