@@ -74,10 +74,6 @@
         color: var(--color-text-light-secondary);
     }
 
-    #skillMessageContainer p:last-of-type {
-        margin-bottom: 2rem;
-    }
-
     #gif {
         width: 100%;
         max-width: 31rem;
