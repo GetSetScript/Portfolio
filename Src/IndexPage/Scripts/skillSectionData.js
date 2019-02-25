@@ -77,7 +77,7 @@ export default [
 		gifSource: ""
 	},
 	{
-		label: "Design",
+		label: "Graphic Design",
         paragraph1: ``, 
         paragraph2: ``, 
 		images: [],

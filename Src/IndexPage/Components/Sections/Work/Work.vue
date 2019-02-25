@@ -59,9 +59,9 @@
 
     #workGridContainer {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
         grid-gap: 1rem;
-        grid-auto-rows: minmax(240px, 1fr);
+        grid-auto-rows: minmax(17rem, 1fr);
     }
 
     .gridBox {
@@ -99,7 +99,7 @@
 
     .details p {
         color: var(--color-text-dark-secondary);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .details a {

@@ -99,16 +99,19 @@
     #skillNav {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         padding: 1rem 0;
     }
 
     #skillLabel {
         margin: 0;
+        width: 100%;
+        max-width: 16rem;
     }
 
     .menuArrow {
+        width: 5rem;
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
         color: var(--color-portlandOrange);
