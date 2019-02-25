@@ -24,7 +24,8 @@ export default [
 				imageUrl: require("./../Assets/Images/vue-icon.png"),
 				imageDescription: "The logo for the Vue framework"
 			}
-		]
+		],
+		gifSource: ""
 	},
 	{
 		label: "Back End",
@@ -45,7 +46,8 @@ export default [
 				imageUrl: require("./../Assets/Images/core-icon.png"),
 				imageDescription: "The logo for ASP.NET Core"
 			}
-		]
+		],
+		gifSource: ""
     },
     {
 		label: "DevOps",
@@ -71,6 +73,14 @@ export default [
 				imageUrl: require("./../Assets/Images/github-icon.png"),
 				imageDescription: "The logo for Github"
 			}
-		]
+		],
+		gifSource: ""
+	},
+	{
+		label: "Design",
+        paragraph1: ``, 
+        paragraph2: ``, 
+		images: [],
+		gifSource: require("./../Assets/Images/zoidberg.gif")
 	}
 ]
