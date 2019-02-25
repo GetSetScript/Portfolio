@@ -7,7 +7,8 @@
             <span id="right" class="menuArrow" v-on:click="skillCycle(1)"></span>
         </nav>
         <div id="skillMessageContainer">
-            <p>{{paragraph}}</p>
+            <p>{{paragraph1}}</p>
+            <p>{{paragraph2}}</p>
             <div id="skillGrid">
                 <img class="skillImage" 
                     v-for="image in images"
@@ -26,7 +27,8 @@
         data() {
             return {
                 label: skillSectionData[0].label,
-                paragraph: skillSectionData[0].paragraph,
+                paragraph1: skillSectionData[0].paragraph1,
+                paragraph2: skillSectionData[0].paragraph2,
                 images: skillSectionData[0].images,
                 skillIndex: 0
             }
@@ -44,7 +46,8 @@
                 }
 
                 this.label = skillSectionData[this.skillIndex].label;
-                this.paragraph = skillSectionData[this.skillIndex].paragraph;
+                this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
+                this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
                 this.images = skillSectionData[this.skillIndex].images;
             }
         }

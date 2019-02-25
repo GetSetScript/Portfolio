@@ -2,8 +2,8 @@
     <section id="contactMe" class="section">
         <div id="contactMessageContainer">
             <h2>Contact Me</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eos ad exercitationem dolorem adipisci?
+            <p>
+                I am available for freelance. I can't wait for the next exciting project! Could it be yours?
             </p>
         </div>
         <form id="contactForm" action="">

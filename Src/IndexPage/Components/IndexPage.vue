@@ -10,11 +10,14 @@
             <div id="aboutMeMessageContainer">
                 <h2>I am Terra Vermillion</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Officiis fugit praesentium minima dolore et nobis 
-                    repudiandae a sunt cupiditate commodi excepturi ex 
-                    delectus, nulla quia veritatis omnis 
-                    voluptatum saepe quidem.
+                    Hello, my name is Terra. I've been programming for two years now, and I've been doing web development for eight months. 
+                    I don't have a traditional education, just a highschool diploma. Instead I learned to program from my 
+                    husband (a professional) and all of the amazing resources you can find online these days. 
+                </p>
+                <p>
+                    I spend most of my time coding and watching tutorials, but otherwise I'll read, watch TV or go hiking. Programming 
+                    is special to me, it's not only a career but also something that I do just for fun. My life's goal is 
+                    to program something that changes the world, or at least a tiny part of it.
                 </p>
             </div>
             <div id="aboutMeImageContainer">
@@ -34,10 +37,9 @@
     </main>
 
     <footer id="socialMedia">
-        <p id="socialMediaText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Voluptates pariatur reprehenderit accusamus, aspernatur 
-            nobis dolorum. Accusantium consequatur quasi 
-            temporibus corrupti!
+        <p id="socialMediaText">
+            Want to know more? Come hang out with me on social media!
+            You can find my code on GitHub, reach me on Twitter, or come hang out with me on Twitch.
         </p>
         <div id="socialMediaIconContainer">
             <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
@@ -82,7 +84,7 @@
 <style scoped>
 
     .section {
-        padding: 3rem 2.5rem;
+        padding: 3rem 2rem;
     }
 
     /*  */
