@@ -1,23 +1,17 @@
 <template>
     <section id="skill" class="section">
         <h2>What technologies do I work with?</h2>
-        <nav id="skillNav">
-            <span id="left" class="menuArrow" v-on:click="skillCycle(-1)"></span>
-            <h3 id="skillLabel">{{label}}</h3>
-            <span id="right" class="menuArrow" v-on:click="skillCycle(1)"></span>
-        </nav>
-        <div id="skillMessageContainer">
-            <p>{{paragraph1}}</p>
-            <p>{{paragraph2}}</p>
-            <div id="skillGrid">
-                <div v-for="image in images" v-bind:key="image.imageUrl">
-                    <img class="skillImage"
-                         v-bind:src="image.imageUrl" 
-                         v-bind:alt="image.imageDesctipion">
-                    <p class="skillImageLabel">{{image.imageLabel}}</p>
+            <div id="skillContainer">
+                <div class="skillSection" v-for="(group, key) in skillSection" v-bind:key="key">
+                    <span class="sectionLabel">{{key}}</span>
+                    <div v-for="image in group" v-bind:key="image.url">
+                        <img class="skillImage"
+                            v-bind:src="image.imageUrl" 
+                            v-bind:alt="image.imageDesctipion">
+                        <p class="skillImageLabel">{{image.imageLabel}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 </template>
 
@@ -27,29 +21,8 @@
     export default {
         data() {
             return {
-                label: skillSectionData[0].label,
-                paragraph1: skillSectionData[0].paragraph1,
-                paragraph2: skillSectionData[0].paragraph2,
-                images: skillSectionData[0].images,
+                skillSection: skillSectionData,
                 skillIndex: 0
-            }
-        },
-        methods: {
-            skillCycle(cycleDirection) {
-                this.skillIndex += cycleDirection;
-
-                if(this.skillIndex === skillSectionData.length) {
-                    this.skillIndex = 0;
-                }
-                
-                if(this.skillIndex < 0) {
-                    this.skillIndex = skillSectionData.length - 1;
-                }
-
-                this.label = skillSectionData[this.skillIndex].label;
-                this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
-                this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
-                this.images = skillSectionData[this.skillIndex].images;
             }
         }
     }
@@ -63,24 +36,28 @@
         color: var(--color-text-light-primary);
     }
 
-    #skillMessageContainer {
-        width: 100%;
+    #skillContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #skillMessageContainer > p {
-        margin: 0 auto 1rem;
-        color: var(--color-text-light-secondary);
-    }
-
-    #skillMessageContainer > P:last-of-type {
-        margin-bottom: 1.5rem;
-    }
-
-    #skillGrid {
+    .skillSection {
         display: grid;
-        grid-template-columns: repeat(2, minmax(100px, 200px));
+        grid-template-areas: "label label";
         grid-gap: 1rem;
-        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+        max-width: 25rem;
+    }
+
+    .sectionLabel {
+        text-align: center;
+        grid-area: label;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-japaneseIndigo-light);
+        margin: 0;
+        color: var(--color-japaneseIndigo-light);
     }
 
     .skillImage {
@@ -89,56 +66,57 @@
         border-radius: 100%;
         border: .4rem solid var(--color-wheat);
         background-color: var(--color-floralWhite);
-        margin: 0 auto .5rem;
+        margin: 0 auto;
     }
 
     .skillImageLabel {
         text-align: center;
-        margin: 0;
+        margin-bottom: .5rem;
         color: var(--color-text-light-secondary);
     }
 
-    #skillNav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem 0;
-    }
+    @media (min-width: 40rem) {
 
-    #skillLabel {
-        margin: 0;
-        width: 100%;
-        max-width: 16rem;
-    }
+        .skillSection:first-of-type {
+            grid-template-areas: "label label label label";
+        }
 
-    .menuArrow {
-        width: 5rem;
-        font-family: var(--font-family-fontAwesome);
-        font-weight: var(--font-weight-fontAwesome-solid);
-        color: var(--color-portlandOrange);
-        font-size: 2rem;
-        cursor: pointer;
-    }
+        .skillSection {
+            max-width: 38rem;
+        }
 
-    .menuArrow#left::before {
-        content: var(--fontAwesome-leftArrow);
-    }
-
-    .menuArrow#right::before {
-        content: var(--fontAwesome-rightArrow);
     }
 
     @media (min-width: 56rem) {
 
-        .menuArrow {
-            font-size: 3rem;
+        #skill h2 {
+            margin-bottom: 2rem;
         }
 
-        #skillGrid {
-            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+        #skillContainer {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
         }
 
+        .skillSection {
+            padding: 0 3rem;
+            max-width: 24rem;
+        }
+
+        .skillSection:nth-of-type(1n + 2) {
+            grid-template-areas: "label";
+            border-left: 1px solid var(--color-japaneseIndigo-light);
+            max-width: 20rem;
+        }
+
+        .skillSection:first-of-type {
+            grid-template-areas: "label label";
+        }
+
+        .sectionLabel {
+            border: none;
+        }
     }
 
 </style>
