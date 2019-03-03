@@ -9,7 +9,6 @@
         <div id="skillMessageContainer">
             <p>{{paragraph1}}</p>
             <p>{{paragraph2}}</p>
-            <img id="gif" v-bind:src="gifSource">
             <div id="skillGrid">
                 <img class="skillImage" 
                     v-for="image in images"
@@ -31,7 +30,6 @@
                 paragraph1: skillSectionData[0].paragraph1,
                 paragraph2: skillSectionData[0].paragraph2,
                 images: skillSectionData[0].images,
-                gifSource: "",
                 skillIndex: 0
             }
         },
@@ -51,7 +49,6 @@
                 this.paragraph1 = skillSectionData[this.skillIndex].paragraph1;
                 this.paragraph2 = skillSectionData[this.skillIndex].paragraph2;
                 this.images = skillSectionData[this.skillIndex].images;
-                this.gifSource = skillSectionData[this.skillIndex].gifSource;
             }
         }
     }
@@ -74,10 +71,8 @@
         color: var(--color-text-light-secondary);
     }
 
-    #gif {
-        width: 100%;
-        max-width: 31rem;
-        height: auto;
+    #skillMessageContainer > P:last-of-type {
+        margin-bottom: 1.5rem;
     }
 
     #skillGrid {
