@@ -54,7 +54,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin("dist"),
         new HtmlWebpackPlugin({
-            title: "Hello world",
+            title: "Get Set Script",
             filename: "index.html",
             template: "./Src/IndexPage/templateIndex.html"
         }),

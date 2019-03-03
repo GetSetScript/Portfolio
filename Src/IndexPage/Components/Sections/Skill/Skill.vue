@@ -10,11 +10,12 @@
             <p>{{paragraph1}}</p>
             <p>{{paragraph2}}</p>
             <div id="skillGrid">
-                <img class="skillImage" 
-                    v-for="image in images"
-                    v-bind:key="image.imageUrl" 
-                    v-bind:src="image.imageUrl" 
-                    v-bind:alt="image.imageDesctipion">
+                <div v-for="image in images" v-bind:key="image.imageUrl">
+                    <img class="skillImage"
+                         v-bind:src="image.imageUrl" 
+                         v-bind:alt="image.imageDesctipion">
+                    <p class="skillImageLabel">{{image.imageLabel}}</p>
+                </div>
             </div>
         </div>
     </section>
@@ -88,7 +89,13 @@
         border-radius: 100%;
         border: .4rem solid var(--color-wheat);
         background-color: var(--color-floralWhite);
-        margin: 0 auto;
+        margin: 0 auto .5rem;
+    }
+
+    .skillImageLabel {
+        text-align: center;
+        margin: 0;
+        color: var(--color-text-light-secondary);
     }
 
     #skillNav {
