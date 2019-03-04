@@ -47,11 +47,6 @@
                     education, instead I was mentored by my husband who is a professional software 
                     developer and I learned from all of the amazing resources you can find online these days.
                 </p>
-                <p>
-                    I spend most of my time coding and watching tutorials, but otherwise I will read, watch TV or go hiking. Software Development
-                    is special to me, as it's not only a career but also something that I do just for fun. My life's goal is 
-                    to work on something that changes the world, or at least a tiny part of it.
-                </p>
             </div>
             <div id="aboutMeImageContainer">
                 <span id="aboutMeSecret"></span>
@@ -65,20 +60,24 @@
 
         <work-section></work-section>
 
+        <section id="socialMedia">
+            <p id="socialMediaText">
+                Want to know more? Come hang out with me on social media!
+                You can find my code on GitHub, reach me on Twitter, or come hang out with me on Twitch.
+            </p>
+            <div id="socialMediaIconContainer">
+                <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
+                <a href="https://www.twitch.tv/getsetscript" target="_blank"><span id="twitch" class="socialMediaIcon"></span></a>
+                <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
+                <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
+            </div>
+        </section>
+        
         <contact-section></contact-section>
     </main>
 
-    <footer id="socialMedia">
-        <p id="socialMediaText">
-            Want to know more? Come hang out with me on social media!
-            You can find my code on GitHub, reach me on Twitter, or come hang out with me on Twitch.
-        </p>
-        <div id="socialMediaIconContainer">
-            <a href="https://www.youtube.com/channel/UCX6BSR8FY2ckMTOjfUavjGw" target="_blank"><span id="youtube" class="socialMediaIcon"></span></a>
-            <a href="https://www.twitch.tv/getsetscript" target="_blank"><span id="twitch" class="socialMediaIcon"></span></a>
-            <a href="https://twitter.com/GetScriptSet" target="_blank"><span id="twitter" class="socialMediaIcon"></span></a>
-            <a href="https://github.com/GetSetScript" target="_blank"><span id="github" class="socialMediaIcon"></span></a>
-        </div>
+    <footer>
+        
     </footer>
   </div>
 </template>
@@ -92,10 +91,10 @@
   export default {
     name: "app",
     components: {
-      "navigation-bar": Navigation,
-      "skill-section-small": SkillSectionSmallScreen,
-      "work-section": WorkSection,
-      "contact-section": ContactSection
+        "navigation-bar": Navigation,
+        "skill-section-small": SkillSectionSmallScreen,
+        "work-section": WorkSection,
+        "contact-section": ContactSection
     },
     data() {
         return {
@@ -147,14 +146,14 @@
         line-height: 1.5;
         text-align: center;
         text-transform: uppercase;
-        color: var(--color-floralWhite);
+        color: var(--color-white);
         padding-top: 25vh;
     }
 
     /*  */
 
     #services {
-        border-top: .6rem solid var(--color-japaneseIndigo-light);
+        border-top: .6rem solid var(--color-border);
     }
 
     #serviceContainer {
@@ -169,8 +168,8 @@
     }
 
     .serviceIconWrapper {
-        border: .4rem solid  var(--color-pewterBlue);
-        background-color: var(--color-floralWhite);
+        border: .4rem solid  var(--color-highlight);
+        background-color: var(--color-white);
         border-radius: 50%;
         width: 8rem;
         height: 8rem;
@@ -183,17 +182,17 @@
         font-size: 4rem;
         line-height: 7.5rem;
         text-align: center;
-        color: var(--color-floralWhite);
+        color: var(--color-white);
     }
 
     #serviceIconFrontEnd::before {
         content: var(--fontAwesome-webpage);
-        color: var(--color-mandarin);
+        color: var(--color-secondary);
     }
 
     #serviceIconBackEnd::before {
         content: var(--fontAwesome-cogs);
-        color: var(--color-ballBlue);
+        color: var(--color-secondary);
     }
 
     .serviceText {
@@ -208,7 +207,16 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 6rem;
-        border-top: .5rem solid var(--color-japaneseIndigo-light);
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+    }
+
+    #aboutMeMessageContainer > p {
+        color: var(--color-offWhite);
+    }
+
+    #aboutMeMessageContainer > p:last-of-type {
+        margin-bottom: 2rem;
     }
 
     #aboutMeMessageContainer {
@@ -227,10 +235,11 @@
         transition-duration: .5s;
         transition-property: transform;
         transform: rotate(13deg);
-        border: .3rem solid var(--color-wheat);
-        -webkit-box-shadow: 3px 5px 11px 3px #9facb8;;
-        -moz-box-shadow: 3px 5px 11px 3px #9facb8;;
-        box-shadow: 3px 5px 11px 3px #9facb8;;
+        border: .5rem solid var(--color-offWhite);
+        border-bottom: 2rem solid var(--color-offWhite);
+        -webkit-box-shadow: 3px 5px 11px 3px #091825;
+        -moz-box-shadow: 3px 5px 11px 3px #091825;
+        box-shadow: 3px 5px 11px 3px #091825;
     }
 
     /* animate about me image rotation */
@@ -244,7 +253,7 @@
     #aboutMeSecret {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
-        color: var(--color-portlandOrange);
+        color: red;
         font-size: 1.5rem;
         margin-left: 2.8rem;
     }
@@ -257,8 +266,7 @@
 
     #socialMedia {
         padding: 3rem;
-        border-top: .5rem solid var(--color-japaneseIndigo-light);
-        background-color: var(--color-wheat);
+        background-color: var(--color-secondary);
     }
 
     #socialMediaText {

@@ -50,7 +50,9 @@
     #work {
         text-align: center;
         padding-bottom: 5rem;
-        border-top: .5rem solid var(--color-japaneseIndigo-light);
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border-bottom: .6rem solid var(--color-border);
     }
 
     #workHeader {
@@ -60,14 +62,13 @@
     #workGridContainer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-        grid-gap: 1rem;
+        grid-gap: 2rem;
         grid-auto-rows: minmax(17rem, 1fr);
     }
 
     .gridBox {
         position: relative;
         overflow: hidden;
-        border: .15rem solid var(--color-japaneseIndigo-light);
     }
 
     .gridBox img {
@@ -89,7 +90,7 @@
         width: 100%;
         height: 100%;
         padding: 0 1rem;
-        background-color: var(--color-wheat);
+        background-color: var(--color-border);
         opacity: 0;
 
         transition-duration: .4s;
@@ -98,14 +99,14 @@
     }
 
     .details p {
-        color: var(--color-text-dark-secondary);
+        color: var(--color-offWhite);
         margin-bottom: 1rem;
     }
 
     .details a {
-        background-color: var(--color-portlandOrange);
+        background-color: var(--color-active);
         padding: .5rem;
-        color: var(--color-floralWhite);
+        color: var(--color-white);
         width: 50%;
         margin: 0 auto;
     }

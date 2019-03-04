@@ -32,8 +32,6 @@
 
     #skill {
         text-align: center;
-        background-color: var(--color-japaneseIndigo-dark);
-        color: var(--color-text-light-primary);
     }
 
     #skillContainer {
@@ -55,24 +53,23 @@
         text-align: center;
         grid-area: label;
         padding-top: 1rem;
-        border-top: 1px solid var(--color-japaneseIndigo-light);
+        border-top: 1px solid rgb(214, 213, 213);
         margin: 0;
-        color: var(--color-japaneseIndigo-light);
+        color: rgb(214, 213, 213);
     }
 
     .skillImage {
         height: 125px;
         width: auto;
         border-radius: 100%;
-        border: .4rem solid var(--color-wheat);
-        background-color: var(--color-floralWhite);
+        border: .4rem solid var(--color-highlight);
+        background-color: var(--color-white);
         margin: 0 auto;
     }
 
     .skillImageLabel {
         text-align: center;
         margin-bottom: .5rem;
-        color: var(--color-text-light-secondary);
     }
 
     @media (min-width: 40rem) {
@@ -106,7 +103,7 @@
 
         .skillSection:nth-of-type(1n + 2) {
             grid-template-areas: "label";
-            border-left: 1px solid var(--color-japaneseIndigo-light);
+            border-left: 1px solid rgb(224, 224, 224);
             max-width: 20rem;
         }
 

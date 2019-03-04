@@ -28,17 +28,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: var(--color-japaneseIndigo-dark);
-        color: var(--color-text-light-primary);
     }
 
     #contactMessageContainer {
         max-width: 31rem;
         padding: 0 1rem;
-    }
-
-    #contactMessageContainer p {
-        color: var(--color-text-light-secondary);
     }
 
     #contactForm {
@@ -55,7 +49,7 @@
     #contactFormSend {
         outline: none;
         border: none;
-        background-color: var(--color-portlandOrange);
+        background-color: var(--color-active);
         color: var(--color-text-light-primary);
     }
 

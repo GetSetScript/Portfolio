@@ -119,7 +119,7 @@
 <style scoped>
 
     .menuContainer {
-        background-color: var(--color-japaneseIndigo-light);
+        background-color: var(--color-border);
         position: fixed;
         z-index: 500;
         width: 100%;
@@ -229,7 +229,7 @@
     }
 
     .menuNav a:hover {
-        background-color: var(--color-japaneseIndigo-dark);
+        background-color: var(--color-primary);
     }
 
     .menuNav a:visited {

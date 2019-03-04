@@ -5,13 +5,13 @@
     --color-text-light-primary: #fbfbf2;
     --color-text-light-secondary: #dadad6;
 
-    --color-floralWhite: #fbfbf2;
+    --color-white: #fbfbf2;
     --color-offWhite: #e6e6df;
-    --color-japaneseIndigo-light: #273949;
-    --color-japaneseIndigo-dark: #122637;
-    --color-pewterBlue: #8EA2B8;
-    --color-mandarin: #F7793F;
-    --color-ballBlue: #2DB4CC;
+    --color-primary: #122637;
+    --color-secondary: #577399;
+    --color-active: #FE5F55;
+    --color-highlight: #BDD5EA;
+    --color-border: #273949;
 
 
     /* font awesome brands */
