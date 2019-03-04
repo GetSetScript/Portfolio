@@ -27,7 +27,7 @@
                 menuContainer: {
                     isAnimated: true,
                     isTransparent: true,
-                    visibilityThreshold: 100,
+                    visibilityThreshold: 50,
                 },
                 menuNav: {
                     isAnimated: true,

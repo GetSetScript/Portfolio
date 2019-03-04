@@ -62,7 +62,7 @@
         height: 125px;
         width: auto;
         border-radius: 100%;
-        border: .4rem solid var(--color-highlight);
+        border: .4rem solid var(--color-tertiary);
         background-color: var(--color-white);
         margin: 0 auto;
     }

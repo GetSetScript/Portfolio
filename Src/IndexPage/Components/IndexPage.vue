@@ -2,7 +2,11 @@
   <div id="pageWrapper">
     <header id="header">
         <navigation-bar></navigation-bar>
-        <h1 id="headerTitle">{ get; set; } Script!</h1>
+        <div id="headerContainer">
+            <h2 id="headerTitleTop">Welcome To</h2>
+            <h1 id="headerTitleMiddle">{ get; set; } Script!</h1>
+            <h2 id="headerTitleBottom">A Full Stack Web Developer Portfolio</h2>
+        </div>
     </header>
 
     <main id="mainContent">
@@ -141,19 +145,27 @@
         height: 100vh;
     }
 
-    #headerTitle {
-        font-size: 3rem;
-        line-height: 1.5;
-        text-align: center;
-        text-transform: uppercase;
-        color: var(--color-white);
+    #headerContainer {
         padding-top: 25vh;
+    }
+
+    #headerTitleMiddle {
+        font-size: 4rem;
+        color: var(--color-text-light-primary);
+        margin-bottom: 1.5rem;
+    }
+
+    #headerTitleTop,
+    #headerTitleBottom {
+        color: var(--color-text-light-secondary);
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     /*  */
 
     #services {
-        border-top: .6rem solid var(--color-border);
+
     }
 
     #serviceContainer {
@@ -164,17 +176,21 @@
     }
 
     .service {
-        padding: 1rem 0;
+        margin-bottom: 1rem;
     }
 
-    .serviceIconWrapper {
-        border: .4rem solid  var(--color-highlight);
+    .service:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /* .serviceIconWrapper {
+        border: .4rem solid  var(--color-tertiary);
         background-color: var(--color-white);
         border-radius: 50%;
         width: 8rem;
         height: 8rem;
         margin: 0 auto 1rem;
-    }
+    } */
 
     .serviceIcon {
         font-family: var(--font-family-fontAwesome);
@@ -207,26 +223,30 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 6rem;
-        background-color: var(--color-secondary);
-        color: var(--color-white);
+        background-color: var(--color-primary);
+        color: var(--color-text-light-primary);
     }
 
+    #aboutMeMessageContainer {
+        min-width: 19rem;
+    }
+
+    #aboutMeMessageContainer > h2 {
+        text-align: left;
+    }
+        
     #aboutMeMessageContainer > p {
-        color: var(--color-offWhite);
+        color: var(--color-text-light-secondary);
     }
 
     #aboutMeMessageContainer > p:last-of-type {
         margin-bottom: 2rem;
     }
 
-    #aboutMeMessageContainer {
-        padding-left: 1rem;
-        min-width: 19rem;
-    }
-
     #aboutMeImageContainer {
         max-width: 31rem;
         min-width: 19rem;
+        padding: 0 1rem 0 1rem;
     }
 
     #aboutMeImage {
@@ -236,7 +256,7 @@
         transition-property: transform;
         transform: rotate(13deg);
         border: .5rem solid var(--color-offWhite);
-        border-bottom: 2rem solid var(--color-offWhite);
+        border-bottom: 3rem solid var(--color-offWhite);
         -webkit-box-shadow: 3px 5px 11px 3px #091825;
         -moz-box-shadow: 3px 5px 11px 3px #091825;
         box-shadow: 3px 5px 11px 3px #091825;
@@ -266,7 +286,7 @@
 
     #socialMedia {
         padding: 3rem;
-        background-color: var(--color-secondary);
+        background-color: var(--color-primary);
     }
 
     #socialMediaText {
@@ -324,7 +344,7 @@
         }
 
         #aboutMeMessageContainer {
-            padding: 0 3rem;
+            padding: 0 2rem 0 0;
         }
 
         #aboutMeSecret {

@@ -50,9 +50,9 @@
     #work {
         text-align: center;
         padding-bottom: 5rem;
-        background-color: var(--color-primary);
-        color: var(--color-white);
-        border-bottom: .6rem solid var(--color-border);
+        background-color: var(--color-secondary);
+        color: var(--color-text-light-primary);
+        /* border-bottom: .6rem solid var(--color-border); */
     }
 
     #workHeader {
@@ -90,7 +90,7 @@
         width: 100%;
         height: 100%;
         padding: 0 1rem;
-        background-color: var(--color-border);
+        background-color: var(--color-primary);
         opacity: 0;
 
         transition-duration: .4s;
@@ -99,14 +99,14 @@
     }
 
     .details p {
-        color: var(--color-offWhite);
+        color: var(--color-text-light-secondary);
         margin-bottom: 1rem;
     }
 
     .details a {
         background-color: var(--color-active);
         padding: .5rem;
-        color: var(--color-white);
+        color: var(--color-text-light-primary);
         width: 50%;
         margin: 0 auto;
     }

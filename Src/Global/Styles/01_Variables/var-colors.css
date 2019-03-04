@@ -3,14 +3,14 @@
     --color-text-dark-primary: #303030;
     --color-text-dark-secondary: #5c5c5c;
     --color-text-light-primary: #fbfbf2;
-    --color-text-light-secondary: #dadad6;
+    --color-text-light-secondary: #cccccc;
 
     --color-white: #fbfbf2;
-    --color-offWhite: #e6e6df;
+    --color-offWhite: #e4e4e4;
     --color-primary: #122637;
-    --color-secondary: #577399;
-    --color-active: #FE5F55;
-    --color-highlight: #BDD5EA;
+    --color-secondary: #122637;
+    --color-tertiary: #C7D2E8;
+    --color-active: #E84219;
     --color-border: #273949;
 
 
