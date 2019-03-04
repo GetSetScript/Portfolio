@@ -21,6 +21,8 @@
 </template>
 
 <script>
+    import { bus } from "./../../IndexPage/Scripts/index.js";
+
     export default {
         data() {
             return {
@@ -34,7 +36,7 @@
                     isOpen: false,
                     animationDelay: 500
                 },
-                mediaQueryBreakPoint: 900
+                layoutChangeBreakPoint: 900
             }
         },
         methods: {
@@ -45,7 +47,7 @@
                 this.menuContainer.isTransparent = false;
                 
                 if(!this.menuNav.isOpen && isVisibleArea) {
-                    setTimeout(() => { this.menuContainer.isTransparent = true }, this.menuNav.animationDelay)
+                    setTimeout(() => { this.menuContainer.isTransparent = true; }, this.menuNav.animationDelay);
                 }
             },
             onScroll() {
@@ -59,7 +61,7 @@
                 let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                 let isVisibleArea = document.documentElement.scrollTop <= this.menuContainer.visibilityThreshold;
 
-                if(width > this.mediaQueryBreakPoint) {
+                if(width > this.layoutChangeBreakPoint) {
                     this.menuNav.isAnimated = false;
                     this.menuNav.isOpen = false;
                     this.menuContainer.isTransparent = isVisibleArea;
@@ -67,6 +69,12 @@
                 else {
                     this.menuNav.isAnimated = true;
                 }
+            },
+            closeMenu() {
+                let isVisibleArea = document.documentElement.scrollTop <= this.menuContainer.visibilityThreshold;
+
+                this.menuNav.isOpen = false;
+                setTimeout(() => { this.menuContainer.isTransparent = isVisibleArea; }, this.menuNav.animationDelay);
             }
         },
         computed: {
@@ -103,11 +111,14 @@
                 else {
                     return this.menuNav.isOpen;
                 }
-            }
+            },
         },
         created() {
             window.addEventListener('scroll', this.onScroll);
             window.addEventListener("resize", this.onResize);
+            bus.$on("closeNavMenu", () => {
+                this.closeMenu();
+            })
         },
         destroyed() {
             window.removeEventListener('scroll', this.onScroll);
