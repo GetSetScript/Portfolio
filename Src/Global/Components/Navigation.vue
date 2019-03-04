@@ -11,8 +11,9 @@
         </a>
          
         <ul class="menuNav" v-bind:class="menuNavClasses">
+            <a href="#services"><li>Services</li></a>
             <a href="#aboutMe"><li>About Me</li></a>
-            <a href="#skill"><li>What I do</li></a>
+            <a href="#skill"><li>Technology</li></a>
             <a href="#work"><li>My Work</li></a>
             <a href="#contactMe"><li>Contact Me</li></a>
         </ul>
@@ -207,14 +208,14 @@
     /*  */
 
     .menuNav li {
-        border-bottom: 1px solid #3e575a;
+        border-bottom: 1px solid #435263;
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
 
     .menuNav li:first-child {
-        border-top: 1px solid #3e575a;
+        border-top: 1px solid #435263;
     }
 
     .menuNav li:last-child {

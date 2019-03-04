@@ -20,17 +20,23 @@
   h2 {
     text-transform: uppercase;
     font-family: var(--font-family-primary);
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
   }
 
   p {
     color: var(--color-text-dark-secondary);
     line-height: 1.5;
-    max-width: 31rem;
+    max-width: 25rem;
     text-align: left;
   }
 
   a:link {
     text-decoration: none;
   }
+
 
   

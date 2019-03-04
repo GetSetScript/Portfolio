@@ -6,6 +6,38 @@
     </header>
 
     <main id="mainContent">
+        <section id="services" class="section">
+            <h2>What can I build?</h2>
+            <div id="serviceContainer">
+                <div class="service">
+                    <div class="serviceIconWrapper">
+                        <div id="serviceIconFrontEnd" class="serviceIcon"></div>
+                    </div>
+                    <h3>Front End</h3>
+                    <p class="serviceText">
+                        Do you want to bring your website designs to life? 
+                        I make custom webpages with responsive layouts, simple 
+                        animations and complex functionality. This portfolio Is 
+                        fully responsive, check it out by resizing the browser!
+                    </p>
+                </div>
+                <div class="service">
+                    <div class="serviceIconWrapper">
+                        <div id="serviceIconBackEnd" class="serviceIcon"></div>
+                    </div>
+                    <h3>BackEnd</h3>
+                    <p class="serviceText">
+                        Does your website need a server or database? 
+                        I build restful Web API's and websites for 
+                        any backend functionality. This portfolio 
+                        uses a Web API to send emails, 
+                        check it out by going to <a href="http://mail.getsetscript.com/api/docs"/>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
         <section id="aboutMe" class="section">
             <div id="aboutMeMessageContainer">
                 <h2>I am Terra Vermillion</h2>
@@ -117,6 +149,55 @@
         text-transform: uppercase;
         color: var(--color-floralWhite);
         padding-top: 25vh;
+    }
+
+    /*  */
+
+    #services {
+        border-top: .6rem solid var(--color-japaneseIndigo-light);
+    }
+
+    #serviceContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .service {
+        padding: 1rem 0;
+    }
+
+    .serviceIconWrapper {
+        border: .4rem solid  var(--color-pewterBlue);
+        background-color: var(--color-floralWhite);
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto 1rem;
+    }
+
+    .serviceIcon {
+        font-family: var(--font-family-fontAwesome);
+        font-weight: var(--font-weight-fontAwesome-solid);
+        font-size: 4rem;
+        line-height: 7.5rem;
+        text-align: center;
+        color: var(--color-floralWhite);
+    }
+
+    #serviceIconFrontEnd::before {
+        content: var(--fontAwesome-webpage);
+        color: var(--color-mandarin);
+    }
+
+    #serviceIconBackEnd::before {
+        content: var(--fontAwesome-cogs);
+        color: var(--color-ballBlue);
+    }
+
+    .serviceText {
+        margin: 0 auto;
     }
 
     /*  */
@@ -240,6 +321,15 @@
 
         #aboutMeSecret {
             font-size: 2rem;
+        }
+
+        #serviceContainer {
+            flex-direction: row;
+        }
+
+        .service {
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
 
     }
