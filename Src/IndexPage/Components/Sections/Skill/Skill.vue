@@ -1,10 +1,31 @@
 <template>
     <section id="skill" class="section">
-        <h2>What technologies do I work with?</h2>
+        <div class="wrapper">
+            <h2>What technologies do I work with?</h2>
             <div id="skillContainer">
-                <div class="skillSection" v-for="(group, key) in skillSection" v-bind:key="key">
-                    <span class="sectionLabel">{{key}}</span>
-                    <div v-for="image in group" v-bind:key="image.url">
+                <div class="skillSection -frontEnd">
+                    <span class="sectionLabel">{{frontEndSection.sectionLabel}}</span>
+                    <div v-for="image in frontEndSection.sectionIcons" v-bind:key="image.imageUrl">
+                        <img class="skillImage"
+                            v-bind:src="image.imageUrl" 
+                            v-bind:alt="image.imageDesctipion">
+                        <p class="skillImageLabel">{{image.imageLabel}}</p>
+                    </div>
+                </div>
+
+                <div class="skillSection -backEnd">
+                    <span class="sectionLabel">{{backEndSection.sectionLabel}}</span>
+                    <div v-for="image in backEndSection.sectionIcons" v-bind:key="image.imageUrl">
+                        <img class="skillImage"
+                            v-bind:src="image.imageUrl" 
+                            v-bind:alt="image.imageDesctipion">
+                        <p class="skillImageLabel">{{image.imageLabel}}</p>
+                    </div>
+                </div>
+
+                <div class="skillSection -devOps">
+                    <span class="sectionLabel">{{devOpsSection.sectionLabel}}</span>
+                    <div v-for="image in devOpsSection.sectionIcons" v-bind:key="image.imageUrl">
                         <img class="skillImage"
                             v-bind:src="image.imageUrl" 
                             v-bind:alt="image.imageDesctipion">
@@ -12,6 +33,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </template>
 
@@ -21,8 +43,9 @@
     export default {
         data() {
             return {
-                skillSection: skillSectionData,
-                skillIndex: 0
+                frontEndSection: skillSectionData.frontEndSection,
+                backEndSection: skillSectionData.backEndSection,
+                devOpsSection: skillSectionData.devOpsSection
             }
         }
     }
@@ -35,34 +58,67 @@
     }
 
     #skillContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skillSection {
         display: grid;
-        grid-template-areas: "label label";
-        grid-gap: 1rem;
-        padding: 1rem;
-        width: 100%;
-        max-width: 25rem;
+        grid-template-areas: "front"
+                             "back"
+                             "devOps";
+        justify-items: center;
     }
 
     .sectionLabel {
-        text-align: center;
-        grid-area: label;
-        padding-top: 1rem;
-        border-top: 1px solid rgb(214, 213, 213);
-        margin: 0;
-        color: rgb(214, 213, 213);
+        color: var(--color-tertiary);
+        padding: 1rem 0 0 0;
+        border-top: .05rem solid gainsboro;
     }
+
+    .skillSection {
+        margin-bottom: 1rem;
+        grid-gap: 1rem;
+    }
+
+/*  */
+
+    .skillSection.-frontEnd {
+        display: grid;
+        grid-template-areas: "label label";
+        grid-area: front;
+    }
+
+    .skillSection.-frontEnd .sectionLabel {
+        grid-area: label;
+    }
+
+/*  */
+
+    .skillSection.-backEnd {
+        display: grid;
+        grid-template-areas: "label label";
+        grid-area: back;
+    }
+
+    .skillSection.-backEnd .sectionLabel {
+        grid-area: label;
+    }
+
+/*  */
+
+    .skillSection.-devOps {
+        display: grid;
+        grid-template-areas: "label label";
+        grid-area: devOps;
+    }
+
+    .skillSection.-devOps .sectionLabel {
+        grid-area: label;
+    }
+
+/*  */
 
     .skillImage {
         height: 125px;
         width: auto;
         border-radius: 100%;
-        border: .4rem solid var(--color-tertiary);
+        border: .4rem solid var(--color-secondary);
         background-color: var(--color-white);
         margin: 0 auto;
     }
@@ -70,50 +126,73 @@
     .skillImageLabel {
         text-align: center;
         margin-bottom: .5rem;
-    }
+    } 
 
-    @media (min-width: 40rem) {
 
-        .skillSection:first-of-type {
+    @media (min-width: 44rem) {
+
+        #skillContainer {
+            grid-template-areas: "front front"
+                                "back devOps";
+            grid-gap: 1rem;
+        }
+
+        .skillSection {
+            margin: 0;
+        }
+
+        .skillSection.-frontEnd {
             grid-template-areas: "label label label label";
         }
 
-        .skillSection {
-            max-width: 38rem;
+        .skillSection.-frontEnd .sectionLabel {
+            border-top: .05rem solid gainsboro;
+        }
+
+        .skillSection.-backEnd {
+            grid-template-areas: "label label";
+        }
+
+        .skillSection.-devOps {
+            grid-template-areas: "label label";
         }
 
     }
 
+
     @media (min-width: 56rem) {
 
-        #skill h2 {
-            margin-bottom: 2rem;
+        .wrapper {
+            width: 85%;
+            margin: 0 auto;
         }
+
+        /*  */
 
         #skillContainer {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
+            grid-template-areas: "front back devOps";
+            grid-gap: 1rem;
+            margin: auto;
+            max-width: 900px;
         }
 
-        .skillSection {
-            padding: 0 3rem;
-            max-width: 24rem;
+        .sectionLabel,
+        .skillSection.-frontEnd .sectionLabel {
+            border: none;
         }
 
-        .skillSection:nth-of-type(1n + 2) {
-            grid-template-areas: "label";
-            border-left: 1px solid rgb(224, 224, 224);
-            max-width: 20rem;
-        }
-
-        .skillSection:first-of-type {
+        .skillSection.-frontEnd {
             grid-template-areas: "label label";
         }
 
-        .sectionLabel {
-            border: none;
+        .skillSection.-backEnd {
+            grid-template-areas: "label";
         }
+
+        .skillSection.-devOps {
+            grid-template-areas: "label";
+        }
+
     }
 
 </style>
