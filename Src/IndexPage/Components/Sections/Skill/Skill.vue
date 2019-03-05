@@ -170,7 +170,7 @@
         /*  */
 
         #skillContainer {
-            grid-template-areas: "front back devOps";
+            grid-template-areas: "back front devOps";
             grid-gap: 1rem;
             margin: auto;
             max-width: 900px;
