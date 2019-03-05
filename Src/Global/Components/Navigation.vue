@@ -1,5 +1,5 @@
 <template>
-    <div class="menuContainer" v-bind:class="menuContainerClasses">
+    <nav class="menuContainer" v-bind:class="menuContainerClasses">
         <div class="menuToggle" v-bind:class="menuToggleClasses"
                                 v-on:click="toggleNavMenu">
                 <div class="menuLineBeginning"></div>
@@ -17,7 +17,7 @@
             <a href="#work"><li>My Work</li></a>
             <a href="#contactMe"><li>Contact Me</li></a>
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script>
