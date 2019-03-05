@@ -46,11 +46,11 @@
   }
 
   input[type="text"] {
-    border: 1px solid var(--color-tertiary);
+    border: 1px solid var(--color-secondary);
   }
 
   textarea {
-    border: 1px solid var(--color-tertiary);
+    border: 1px solid var(--color-secondary);
   }
 
 

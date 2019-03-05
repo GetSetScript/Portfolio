@@ -124,6 +124,10 @@
         padding: 0 1rem;
     }
 
+    #contactMessageContainer {
+        margin-bottom: 1rem;
+    }
+
     #contactForm {
         max-width: 31rem;
         padding: 0 1rem;
@@ -144,18 +148,23 @@
         color: var(--color-text-light-primary);
     }
 
+    #contactFormSend:hover {
+        background-color: var(--color-active-dark);
+    }
+
     #sendIcon {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
         font-size: 1rem;
         font-style: normal;
+        margin-right: 1rem;
     }
 
     #sendIcon::before {
         content: var(--fontAwesome-paper-plane);
     }
 
-    /*  */
+    /* hidden elements */
 
     #submissionResultContainer {
         background-color: white;
@@ -176,7 +185,7 @@
         margin: auto;
         border-radius: 50%;
         border: 10px solid rgba(0,0,0,.1);
-        border-top: 10px solid red;
+        border-top: 10px solid var(--color-active);
         animation: animate 1.5s infinite linear;
     }
     @keyframes animate {
@@ -190,7 +199,7 @@
         }
     }
 
-    /*  */
+    /* error indication */
 
     .-errorBorder {
         border: 1px solid red;

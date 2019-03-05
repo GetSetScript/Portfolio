@@ -195,6 +195,14 @@
 
     }
 
+    @media (min-width: 110rem) {
+
+        .wrapper {
+            width: 70%;
+        }
+
+    }
+
 </style>
 
 
