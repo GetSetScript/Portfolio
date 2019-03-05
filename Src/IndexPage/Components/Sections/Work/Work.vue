@@ -90,7 +90,7 @@
         width: 100%;
         height: 100%;
         padding: 0 1rem;
-        background-color: var(--color-primary);
+        background-color: white;
         opacity: 0;
 
         transition-duration: .4s;

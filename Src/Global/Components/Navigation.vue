@@ -12,7 +12,7 @@
          
         <ul class="menuNav" v-bind:class="menuNavClasses">
             <a href="#services"><li>Services</li></a>
-            <a href="#aboutMe"><li>About Me</li></a>
+            <a href="#about"><li>About Me</li></a>
             <a href="#skill"><li>Technology</li></a>
             <a href="#work"><li>My Work</li></a>
             <a href="#contactMe"><li>Contact Me</li></a>

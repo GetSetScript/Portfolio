@@ -29,11 +29,16 @@
     text-align: center;
   }
 
+  h4 {
+    color: var(--color-tertiary);
+  }
+
   p {
     color: var(--color-text-dark-secondary);
     line-height: 1.5;
-    max-width: 25rem;
+    max-width: 27rem;
     text-align: left;
+    margin: 0 auto;
   }
 
   a:link {
