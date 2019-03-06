@@ -338,20 +338,21 @@
     #map {
         width: 100%;
         height: 20rem;
+        border: none;
     }
 
     #mapCover {
         position: absolute;
-        top: 0;
+        top: -.05rem;
         left: 0;
         width: 100%;
-        height: 10%;
+        height: 3rem;
         background-color: var(--color-white);
     }
 
     #montanaVideo {
         width: 100%;
-        height: 10rem;
+        height: 5rem;
         background-color: var(--color-primary);
         border-top: .3rem solid var(--color-tertiary);
     }

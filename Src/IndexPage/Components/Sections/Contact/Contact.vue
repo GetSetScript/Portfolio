@@ -138,8 +138,7 @@
     }
 
     #contactForm input,
-    #contactForm textarea,
-    #contactForm button {
+    #contactForm textarea {
         margin-bottom: 1rem;
         padding: .5rem;
         width: 100%;
@@ -150,6 +149,8 @@
         border: none;
         background-color: var(--color-active);
         color: var(--color-text-light-primary);
+        padding: .5rem;
+        width: 100%;
     }
 
     #contactFormSubmitIcon:hover {

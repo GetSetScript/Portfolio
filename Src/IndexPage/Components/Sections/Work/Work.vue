@@ -113,6 +113,10 @@
         margin: 0 auto;
     }
 
+    .details a:hover {
+        background-color: var(--color-active-dark);
+    }
+
     /* animate grid hover effects */
 
         .gridBox:hover img {
