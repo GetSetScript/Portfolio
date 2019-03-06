@@ -94,6 +94,7 @@
                 <iframe src="https://www.google.com/maps/d/embed?mid=1Q3-ofn64a2e-yIGzENNMIyzJYefcgNXx&hl=en" id="map">
                 </iframe>
                 <div id="mapCover"></div>
+                <div id="montanaVideo"></div>
             </footer>
         </div>
     </div>
@@ -344,8 +345,19 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 15%;
+        height: 10%;
         background-color: var(--color-white);
+    }
+
+    #montanaVideo {
+        width: 100%;
+        height: 10rem;
+        background-color: var(--color-primary);
+        border-top: .3rem solid var(--color-tertiary);
+    }
+
+    #contactMe.section {
+        padding-bottom: 0;
     }
 
     @media (min-width: 38rem) {
