@@ -4,33 +4,33 @@
             <h2 id="workHeader">My Work</h2>
             <div id="workGridContainer">
                 <div class="gridBox">
-                    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1153&q=80" alt="">
+                    <img src="./../../../Assets/Images/bookshelf.png" alt="">
                     <div class="details">
-                        <h3>Some Title</h3>
+                        <h3>The Bookshelf</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
                         <a href="#">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="https://previews.123rf.com/images/pozitiw/pozitiw1211/pozitiw121100152/16516172-tic-tac-toe-doodle-style.jpg" alt="">
+                    <img src="./../../../Assets/Images/mailHub.png" alt="">
                     <div class="details">
-                        <h3>Some Title</h3>
+                        <h3>The MailHub</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
                         <a href="#">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="https://static.themezy.com/system/resources/previews/000/000/058/non_2x/free-responsive-template-for-schools.jpg" alt="">
+                    <img src="./../../../Assets/Images/concuer.png" alt="">
                     <div class="details">
-                        <h3>Some Title</h3>
+                        <h3>Concuer CopyCat</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
                         <a href="#">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="https://previews.123rf.com/images/dzein/dzein1502/dzein150200002/36125549-under-construction-sign-in-white-background-3d-mesh-vector-illustration.jpg" alt="">
+                    <img src="./../../../Assets/Images/template.png" alt="">
                     <div class="details">
-                        <h3>Some Title</h3>
+                        <h3>Project Templates</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
                         <a href="#">View Project</a>
                     </div>
@@ -70,6 +70,7 @@
     .gridBox {
         position: relative;
         overflow: hidden;
+        border-radius: 2%;
     }
 
     .gridBox img {

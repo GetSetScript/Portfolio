@@ -355,7 +355,7 @@
 
     #montanaVideo {
         width: 100%;
-        height: 5rem;
+        height: 4rem;
         background-color: var(--color-primary);
         border-top: .2rem solid var(--color-tertiary);
     }

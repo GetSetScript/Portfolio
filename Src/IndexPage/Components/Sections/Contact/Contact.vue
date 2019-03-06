@@ -154,7 +154,7 @@
         width: 100%;
     }
 
-    #contactFormSubmitIcon:hover {
+    #contactFormSubmit:hover {
         background-color: var(--color-active-dark);
     }
 
