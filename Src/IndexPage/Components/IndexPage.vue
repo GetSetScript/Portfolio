@@ -91,11 +91,9 @@
             </main>
 
             <footer>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2971067.4462766545!2d-113.96783217310532!3d48.16584204913464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d48.202138999999995!2d-114.315112!5e0!3m2!1sen!2sus!4v1551839973905"
-                        frameborder="0" 
-                        style="border:0" 
-                        allowfullscreen
-                        id="map"></iframe>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1Q3-ofn64a2e-yIGzENNMIyzJYefcgNXx&hl=en" id="map">
+                </iframe>
+                <div id="mapCover"></div>
             </footer>
         </div>
     </div>
@@ -106,6 +104,7 @@
   import SkillSectionSmallScreen from "./Sections/Skill/Skill.vue";
   import WorkSection from "./Sections/Work/Work.vue";
   import ContactSection from "./Sections/Contact/Contact.vue";
+//   import FooterSection from "";
   import { bus } from "./../Scripts/index.js";
 
   export default {
@@ -331,12 +330,23 @@
 
     /*  */
 
+    footer {
+        position: relative;
+    }
+
     #map {
         width: 100%;
         height: 20rem;
-        border-top: .5rem solid var(--color-tertiary);
     }
 
+    #mapCover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15%;
+        background-color: var(--color-white);
+    }
 
     @media (min-width: 38rem) {
 
