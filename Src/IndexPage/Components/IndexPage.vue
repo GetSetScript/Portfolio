@@ -34,7 +34,7 @@
                                     Does your website need a server or database? 
                                     I build RESTful Web API's and websites for 
                                     any backend functionality. This portfolio 
-                                    uses a Web API to send emails and you
+                                    uses a Web API to send emails and you can
                                     check it out by following the <a href="http://mail.getsetscript.com/api/docs" target="_blank">link</a>.
                                 </p>
                             </div>
@@ -339,7 +339,7 @@
 
     #map {
         width: 100%;
-        height: 20rem;
+        height: 38vh;
         border: none;
     }
 
@@ -348,15 +348,16 @@
         top: -.05rem;
         left: 0;
         width: 100%;
-        height: 3rem;
+        height: 8.2vh;
         background-color: var(--color-white);
+        border-bottom: .2rem solid var(--color-secondary);
     }
 
     #montanaVideo {
         width: 100%;
         height: 5rem;
         background-color: var(--color-primary);
-        border-top: .3rem solid var(--color-tertiary);
+        border-top: .2rem solid var(--color-tertiary);
     }
 
     #contactMe.section {

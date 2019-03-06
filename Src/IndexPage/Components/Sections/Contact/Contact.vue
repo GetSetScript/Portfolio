@@ -27,7 +27,7 @@
                    v-bind:class="{ '-errorBorder': errors.has('email') }" />
 
 
-            <span class="-errorText" v-show="errors.has('message')">{{ errors.first('message') }}</span>
+            <span class="-errorText" v-show="errors.has('message')">{{ errors.first('message') }}  ( char : {{ contact.message.length }} )</span>
             <textarea id="contactFormMessage" 
                       placeholder="Your message" 
                       name="message" 
@@ -45,6 +45,7 @@
 
             <div id="spinnerContainer" v-show="hasFormSubmissionStarted">
                 <div v-bind:class="{ 'spinner': hasFormSubmissionStarted }"></div>
+                <span>Sending....</span>
             </div>
 
             <div id="submissionResultContainer" 
@@ -203,6 +204,13 @@
         }
     }
 
+    #spinnerContainer span {
+        color: var(--color-text-light-primary);
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
     #submissionResultContainer {
         display: flex;
         flex-direction: column;
@@ -230,8 +238,8 @@
         cursor: pointer;
         text-align: center;
         background-color: var(--color-white);
-        width: 8rem;
-        padding: .3rem;
+        width: 80%;
+        padding: .4rem;
         margin: 0 auto;
     }
 
