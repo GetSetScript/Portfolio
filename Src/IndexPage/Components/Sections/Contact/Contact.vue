@@ -7,8 +7,7 @@
             </p>
         </div>
         <form id="contactForm" name="contactForm" v-on:submit.prevent="onSave()">
-            <span class="errorDisplay -errorText" v-if="errors.has('name')">{{ errors.first('name') }}</span>
-            <label for="contactFormName"></label>
+            <span class="-errorText" v-show="errors.has('name')">{{ errors.first('name') }}</span>
             <input id="contactFormName"
                    type="text" 
                    placeholder="Your name" 
@@ -18,8 +17,7 @@
                    v-bind:class="{ '-errorBorder': errors.has('name') }" />
 
 
-            <span class="errorDisplay -errorText" v-if="errors.has('email')">{{ errors.first('email') }}</span>
-            <label for="contactFormEmail"></label>
+            <span class="-errorText" v-show="errors.has('email')">{{ errors.first('email') }}</span>
             <input id="contactFormEmail" 
                    type="text" 
                    placeholder="Your email" 
@@ -29,8 +27,7 @@
                    v-bind:class="{ '-errorBorder': errors.has('email') }" />
 
 
-            <span class="errorDisplay -errorText" v-if="errors.has('message')">{{ errors.first('message') }}</span>
-            <label for="contactFormMessage"></label>
+            <span class="-errorText" v-show="errors.has('message')">{{ errors.first('message') }}</span>
             <textarea id="contactFormMessage" 
                       placeholder="Your message" 
                       name="message" 
@@ -41,16 +38,21 @@
                       v-bind:class="{ '-errorBorder': errors.has('message') }" />
 
 
-            <button id="contactFormSend" v-bind:disabled="errors.any()"><i id="sendIcon"></i>Send Message</button>
+            <button id="contactFormSubmit" v-bind:disabled="errors.any()" type="submit">
+                <i id="contactFormSubmitIcon"></i>
+                Send Message
+            </button>
 
-            <div v-bind:class="{ 'spinner': hasFormSubmissionStarted }" 
-                 v-if="hasFormSubmissionStarted"></div>
-
+            <div id="spinnerContainer" v-show="hasFormSubmissionStarted">
+                <div v-bind:class="{ 'spinner': hasFormSubmissionStarted }"></div>
+            </div>
 
             <div id="submissionResultContainer" 
-                 v-if="isFormSubmitted" 
-                 v-bind:class="{ '-successBorder': isFormSubmissionSuccess, '-errorBorder': !isFormSubmissionSuccess }">
-                <p id="submissionResultText">{{ formSubmissionResult }}</p>
+                 v-show="isFormSubmitted"
+                 v-bind:class="{ '-successMessage': isFormSubmissionSuccess, '-errorMessage': !isFormSubmissionSuccess }">
+                <h3 id="submissionResultHeader">{{ formSubmissionResult.header }}</h3>
+                <p id="submissionResultText">{{ formSubmissionResult.message }}</p>
+                <span id="submissionResultClose" v-on:click="closeFormSubmissonMessage">OK</span>
             </div>
         </form>
     </section>
@@ -68,7 +70,10 @@
                     email: "",
                     message: ""
                 },
-                formSubmissionResult: "",
+                formSubmissionResult: {
+                    message: "",
+                    header: ""
+                },
                 isFormSubmitted: false,
                 isFormSubmissionSuccess: false,
                 hasFormSubmissionStarted: false
@@ -79,33 +84,34 @@
                 this.$validator.validateAll()
                     .then((result) => {
                         if (result) {
-                            this.formSubmissionResult = "";
-
+                            this.formSubmissionResult.message = "";
+                            this.formSubmissionResult.header = "";
                             this.hasFormSubmissionStarted = true;
                             this.isFormSubmitted = false;
 
-                            setTimeout(() => 
-                            {
-                                axios.post("https://localhost:44396/api/Email/ContactForm", this.contact)
-                                    .then(() => {
-                                        this.contact.name = "";
-                                        this.contact.email = "";
-                                        this.contact.message = "";
+                            axios.post("https://mail.getsetscript.com/api/Email/ContactForm", this.contact)
+                                .then(() => {
+                                    this.contact.name = "";
+                                    this.contact.email = "";
+                                    this.contact.message = "";
 
-                                        this.isFormSubmitted = true;
-                                        this.isFormSubmissionSuccess = true;
-                                        this.hasFormSubmissionStarted = false;
-                                        this.formSubmissionResult = "Your Email Was Sent!"
-                                    })
-                                    .catch(() => {
-                                        this.isFormSubmitted = true;
-                                        this.hasFormSubmissionStarted = false;
-                                        this.formSubmissionResult = "Your email didn't send. Try again later? Or email me directly at \"getsetscript@gmail.com\" .";
-                                    });
-
-                            }, 2000);
+                                    this.isFormSubmitted = true;
+                                    this.isFormSubmissionSuccess = true;
+                                    this.hasFormSubmissionStarted = false;
+                                    this.formSubmissionResult.message = "Your Email Was Sent!";
+                                    this.formSubmissionResult.header = "success";
+                                })
+                                .catch(() => {
+                                    this.isFormSubmitted = true;
+                                    this.hasFormSubmissionStarted = false;
+                                    this.formSubmissionResult.message = "Your email didn't send. Try again later? Or email me directly at \"getsetscript@gmail.com\" .";
+                                    this.formSubmissionResult.header = "error"
+                                });
                         }
                     })
+            },
+            closeFormSubmissonMessage() {
+                this.isFormSubmitted = false;
             }
         }
     }
@@ -122,15 +128,13 @@
     #contactMessageContainer {
         max-width: 31rem;
         padding: 0 1rem;
-    }
-
-    #contactMessageContainer {
         margin-bottom: 1rem;
     }
 
     #contactForm {
         max-width: 31rem;
         padding: 0 1rem;
+        position: relative;
     }
 
     #contactForm input,
@@ -141,18 +145,18 @@
         width: 100%;
     }
 
-    #contactFormSend {
+    #contactFormSubmit {
         outline: none;
         border: none;
         background-color: var(--color-active);
         color: var(--color-text-light-primary);
     }
 
-    #contactFormSend:hover {
+    #contactFormSubmitIcon:hover {
         background-color: var(--color-active-dark);
     }
 
-    #sendIcon {
+    #contactFormSubmitIcon {
         font-family: var(--font-family-fontAwesome);
         font-weight: var(--font-weight-fontAwesome-solid);
         font-size: 1rem;
@@ -160,32 +164,31 @@
         margin-right: 1rem;
     }
 
-    #sendIcon::before {
+    #contactFormSubmitIcon::before {
         content: var(--fontAwesome-paper-plane);
     }
 
     /* hidden elements */
 
-    #submissionResultContainer {
-        background-color: white;
-    }
-
-    #submissionResultText {
-        text-align: center;
-        margin: auto;
-    }
-
-    #contactForm .errorDisplay {
-        padding: 0;
+    #spinnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-primary);
     }
 
     .spinner {
-        width: 50px;
-        height: 50px;
+        width: 7rem;
+        height: 7rem;
         margin: auto;
         border-radius: 50%;
-        border: 10px solid rgba(0,0,0,.1);
-        border-top: 10px solid var(--color-active);
+        border: .8rem solid rgba(255, 255, 255, 0.1);
+        border-top: .8rem solid var(--color-active);
         animation: animate 1.5s infinite linear;
     }
     @keyframes animate {
@@ -199,19 +202,60 @@
         }
     }
 
-    /* error indication */
+    #submissionResultContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #submissionResultHeader {
+        letter-spacing: .15rem;
+        text-transform: uppercase;
+    }
+
+    #submissionResultText {
+        color: var(--color-text-dark-primary);
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        padding: 0 1rem;
+    }
+
+    #submissionResultClose {
+        cursor: pointer;
+        text-align: center;
+        background-color: var(--color-white);
+        width: 8rem;
+        padding: .3rem;
+        margin: 0 auto;
+    }
+
+    #submissionResultClose:hover {
+        background-color: var(--color-offWhite);
+    }
+
+    /* error indication classes */
 
     .-errorBorder {
         border: 1px solid red;
     }
 
-    .-successBorder {
-        border: 1px solid green;
-    }
-
     .-errorText {
         color: red;
     }
+
+    .-errorMessage {
+        background-color: #ff675a;
+    }
+
+    .-successMessage {
+        background-color: #95df9d;
+    }
+
     
     @media (min-width: 56rem) {
 
@@ -222,7 +266,7 @@
         }
 
         #contactMessageContainer {
-            max-width: 22rem;;
+            max-width: 22rem;
         }
 
     }

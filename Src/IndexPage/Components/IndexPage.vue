@@ -91,7 +91,11 @@
             </main>
 
             <footer>
-                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2971067.4462766545!2d-113.96783217310532!3d48.16584204913464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d48.202138999999995!2d-114.315112!5e0!3m2!1sen!2sus!4v1551839973905"
+                        frameborder="0" 
+                        style="border:0" 
+                        allowfullscreen
+                        id="map"></iframe>
             </footer>
         </div>
     </div>
@@ -326,6 +330,13 @@
     }
 
     /*  */
+
+    #map {
+        width: 100%;
+        height: 20rem;
+        border-top: .5rem solid var(--color-tertiary);
+    }
+
 
     @media (min-width: 38rem) {
 
