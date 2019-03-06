@@ -49,11 +49,13 @@
                             <div id="aboutMeMessageContainer">
                                 <h2>Hello and Welcome!</h2>
                                 <p>
-                                    My name is Terra Vermillion and I am a self taught web developer with a year and a half of experience. 
-                                    I have completed over 30 large online tutorials, totaling thousands of hours of learning and 
-                                    that number continues to grow everyday. From the very beginning of learning to code I have 
-                                    received daily mentoring from a professional software developer.
-                                    My goal for the future is world domination through web development.
+                                    My name is Terra Vermillion and I am a self taught web developer 
+                                    with a year and a half of coding experience. Between completing 
+                                    over thirty large online tutorials and being under the guidance 
+                                    of a professional software developer, I have spent thousands of 
+                                    hours learning the various elements of web development. 
+                                    I currently have three live web projects and I am hard at work 
+                                    on more, one of which I hope will lead to world domination or at least a career.
                                 </p>
                             </div>
                             <div id="aboutMeImageContainer">
