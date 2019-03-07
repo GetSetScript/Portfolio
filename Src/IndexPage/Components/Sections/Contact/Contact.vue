@@ -27,7 +27,7 @@
                    v-bind:class="{ '-errorBorder': errors.has('email') }" />
 
 
-            <span class="-errorText" v-show="errors.has('message')">{{ errors.first('message') }}  ( char : {{ contact.message.length }} )</span>
+            <span class="-errorText" v-show="errors.has('message')">{{ errors.first('message') }}</span>
             <textarea id="contactFormMessage" 
                       placeholder="Your message" 
                       name="message" 
@@ -36,6 +36,7 @@
                       v-model="contact.message"
                       v-validate="{ 'required': true, min: 125 }"
                       v-bind:class="{ '-errorBorder': errors.has('message') }" />
+            <span id="characterCount">Character Count: {{ contact.message.length }}</span>
 
 
             <button id="contactFormSubmit" v-bind:disabled="errors.any()" type="submit">
@@ -138,8 +139,13 @@
         position: relative;
     }
 
-    #contactForm input,
-    #contactForm textarea {
+    #contactForm textarea,
+    #contactFormSubmit {
+        padding: .5rem;
+        width: 100%;
+    }
+
+    #contactForm input {
         margin-bottom: 1rem;
         padding: .5rem;
         width: 100%;
@@ -150,8 +156,6 @@
         border: none;
         background-color: var(--color-active);
         color: var(--color-text-light-primary);
-        padding: .5rem;
-        width: 100%;
     }
 
     #contactFormSubmit:hover {
@@ -214,7 +218,7 @@
     #submissionResultContainer {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         position: absolute;
         top: 0;
         left: 0;
@@ -225,12 +229,14 @@
     #submissionResultHeader {
         letter-spacing: .15rem;
         text-transform: uppercase;
+        font-size: 2.5rem;
+        margin-bottom: 0;
     }
 
     #submissionResultText {
         color: var(--color-text-dark-primary);
         text-align: center;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto;
         padding: 0 1rem;
     }
 
@@ -238,13 +244,19 @@
         cursor: pointer;
         text-align: center;
         background-color: var(--color-white);
-        width: 80%;
-        padding: .4rem;
+        width: 60%;
+        padding: .9rem;
         margin: 0 auto;
     }
 
     #submissionResultClose:hover {
         background-color: var(--color-offWhite);
+    }
+
+    #characterCount {
+        color: var(--color-secondary);
+        margin-bottom: 1rem;
+        display: inline-block;
     }
 
     /* error indication classes */

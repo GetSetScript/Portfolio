@@ -4,7 +4,7 @@
             <h2 id="workHeader">My Work</h2>
             <div id="workGridContainer">
                 <div class="gridBox">
-                    <img src="./../../../Assets/Images/bookshelf.png" alt="">
+                    <img src="./../../../Assets/Images/bookshelf.jpg" alt="">
                     <div class="details">
                         <h3>The Bookshelf</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="./../../../Assets/Images/mailHub.png" alt="">
+                    <img src="./../../../Assets/Images/mailhub.jpg" alt="">
                     <div class="details">
                         <h3>The MailHub</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
@@ -20,15 +20,15 @@
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="./../../../Assets/Images/concuer.png" alt="">
+                    <img src="./../../../Assets/Images/conquer.jpg" alt="">
                     <div class="details">
-                        <h3>Concuer CopyCat</h3>
+                        <h3>Conquer CopyCat</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
                         <a href="#">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="./../../../Assets/Images/template.png" alt="">
+                    <img src="./../../../Assets/Images/template.jpg" alt="">
                     <div class="details">
                         <h3>Project Templates</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
@@ -70,7 +70,6 @@
     .gridBox {
         position: relative;
         overflow: hidden;
-        border-radius: 2%;
     }
 
     .gridBox img {
@@ -102,7 +101,7 @@
     }
 
     .details p {
-        /* color: var(--color-text-light-secondary); */
+        text-align: center;
         margin-bottom: 1rem;
     }
 
