@@ -2,8 +2,8 @@
     <section id="contactMe" class="section">
         <div id="contactMessageContainer">
             <h2>Contact Me</h2>
-            <p>y
-                I am available for freelance. I can't wait for the next exciting project! It could be yours?
+            <p>
+                I am available for freelance. I can't wait for the next exciting project! Could it be yours?
             </p>
         </div>
         <form id="contactForm" name="contactForm" v-on:submit.prevent="onSave()">

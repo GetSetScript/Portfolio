@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+//const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
     entry: "./Src/IndexPage/Scripts/index.js",
@@ -67,7 +67,7 @@ module.exports = {
             filename: "[name].styles.[contenthash].css"
         }),
 
-        new BundleAnalyzerPlugin()
+        //new BundleAnalyzerPlugin()
     ],
     resolve: {
         extensions: [".vue", ".js", ".css", ".json"],
