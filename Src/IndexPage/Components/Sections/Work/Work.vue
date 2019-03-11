@@ -7,32 +7,33 @@
                     <img src="./../../../Assets/Images/bookshelf.jpg" alt="">
                     <div class="details">
                         <h3>The Bookshelf</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
-                        <a href="#">View Project</a>
+                        <p>A web application for keeping track of your favorite books. Built with ASP.NET Core, Razor Views and custom CSS.</p>
+                        <a href="http://bookshelf.getsetscript.com">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
                     <img src="./../../../Assets/Images/mailhub.jpg" alt="">
                     <div class="details">
                         <h3>The MailHub</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
-                        <a href="#">View Project</a>
+                        <p>A web API built with ASP.NET Core for sending mail to getsetscript.com</p>
+                        <a href="http://mail.getsetscript.com">View Docs</a>
                     </div>
                 </div>
                 <div class="gridBox">
                     <img src="./../../../Assets/Images/conquer.jpg" alt="">
                     <div class="details">
-                        <h3>Conquer CopyCat</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
-                        <a href="#">View Project</a>
+                        <h3>Conquer Copycat</h3>
+                        <p>A copy of a popular Bootstrap template built from scratch with modern CSS. 
+                           Make sure to check out the original <a href="https://templatemo.com/tm-476-conquer">here.</a></p>
+                        <a href="http://conquer.getsetscript.com">View Project</a>
                     </div>
                 </div>
                 <div class="gridBox">
                     <img src="./../../../Assets/Images/template.jpg" alt="">
                     <div class="details">
                         <h3>Project Templates</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolores et minima ut mollitia, veritatis maxime dicta numquam exercitationem cupiditate!</p>
-                        <a href="#">View Project</a>
+                        <p>ASP.NET Core project templates that use Webpack and Vue.</p>
+                        <a href="https://github.com/GetSetScript">View Code</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +106,11 @@
         margin-bottom: 1rem;
     }
 
-    .details a {
+    .details p > a {
+        text-decoration: underline;
+    }
+
+    .details > a {
         background-color: var(--color-active);
         padding: .5rem;
         color: var(--color-text-light-primary);
@@ -113,7 +118,7 @@
         margin: 0 auto;
     }
 
-    .details a:hover {
+    .details > a:hover {
         background-color: var(--color-active-dark);
     }
 

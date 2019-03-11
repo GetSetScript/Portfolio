@@ -1,20 +1,28 @@
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-    entry: "",
+    entry: "./Src/IndexPage/Scripts/index.js",
     output: {
-        filename: "bundle.[contenthash].js",
+        filename: "[name].bundle.[contenthash].js",
         path: path.resolve(__dirname, "./dist"),
         publicPath: ""
     },
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
+    },
     mode: "production",
     module: {
-        rules: [ 
+        rules: [
             {
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpg|gif)$/,
                 use: [
                     "file-loader"
                 ]
@@ -22,7 +30,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, "css-loader"
+                    MiniCssExtractPlugin.loader, "css-loader" 
                 ]
             },
             {
@@ -32,31 +40,39 @@ module.exports = {
                     loader: "babel-loader",
                     options: {
                         presets: [
-                            "@babel/env"
+                            "@babel/preset-env"
                         ]
                     }
                 }
+            },
+            {
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                use: [
+                    "vue-loader"
+                ]
             }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin("dist"),
+        new HtmlWebpackPlugin({
+            title: "Get Set Script",
+            filename: "index.html",
+            template: "./Src/IndexPage/templateIndex.html"
+        }),
+        new VueLoaderPlugin(),
+
         new MiniCssExtractPlugin({
-            filename: "styles.[contenthash].css"
+            filename: "[name].styles.[contenthash].css"
         }),
 
-        new CleanWebpackPlugin("dist"), 
-
-        // new HtmlWebpackPlugin({ --this modifies the html page rendered
-        //     title: "Hello world",
-        //     filename: "subfolder/custom_filename.html",
-        //     meta: {
-        //         viewport: "width=device-width, initial-scale=1"
-        //     }
-        // })
-        new HtmlWebpackPlugin({ 
-            title: "Hello world",
-            template: "src/index.hbs",
-            description: "Some description"
-        })
-    ]
+        new BundleAnalyzerPlugin()
+    ],
+    resolve: {
+        extensions: [".vue", ".js", ".css", ".json"],
+        alias: {
+            "vue$": "vue/dist/vue.min.js"
+        }
+    }
 }
