@@ -362,6 +362,11 @@
     padding: .5rem;
     width: 100%;
 }
+#characterCount[data-v-39f05adc] {
+    color: #7a808b;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
 #contactFormSubmit[data-v-39f05adc] {
     outline: none;
     border: none;
@@ -451,11 +456,6 @@
 }
 #submissionResultClose[data-v-39f05adc]:hover {
     background-color: var(--color-offWhite);
-}
-#characterCount[data-v-39f05adc] {
-    color: var(--color-secondary);
-    margin-bottom: 1rem;
-    display: inline-block;
 }
 
 /* error indication classes */

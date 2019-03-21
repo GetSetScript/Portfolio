@@ -16,7 +16,6 @@
                    v-validate="{ 'required': true, min: 2 }"
                    v-bind:class="{ '-errorBorder': errors.has('name') }" />
 
-
             <span class="-errorText" v-show="errors.has('email')">{{ errors.first('email') }}</span>
             <input id="contactFormEmail" 
                    type="text" 
@@ -91,7 +90,7 @@
                             this.hasFormSubmissionStarted = true;
                             this.isFormSubmitted = false;
 
-                            axios.post("https://mail.getsetscript.com/api/Email/ContactForm", this.contact)
+                            axios.post("http://mail.getsetscript.com/api/Email/ContactForm", this.contact)
                                 .then(() => {
                                     this.contact.name = "";
                                     this.contact.email = "";
@@ -114,6 +113,10 @@
             },
             closeFormSubmissonMessage() {
                 this.isFormSubmitted = false;
+
+                if (this.isFormSubmissionSuccess) {
+                    this.errors.clear();
+                }
             }
         }
     }
@@ -149,6 +152,12 @@
         margin-bottom: 1rem;
         padding: .5rem;
         width: 100%;
+    }
+
+    #characterCount {
+        color: #7a808b;
+        margin-bottom: 1rem;
+        display: inline-block;
     }
 
     #contactFormSubmit {
@@ -251,12 +260,6 @@
 
     #submissionResultClose:hover {
         background-color: var(--color-offWhite);
-    }
-
-    #characterCount {
-        color: var(--color-secondary);
-        margin-bottom: 1rem;
-        display: inline-block;
     }
 
     /* error indication classes */

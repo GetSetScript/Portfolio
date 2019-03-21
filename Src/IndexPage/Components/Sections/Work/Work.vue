@@ -20,20 +20,18 @@
                     </div>
                 </div>
                 <div class="gridBox">
-                    <img src="./../../../Assets/Images/conquer.jpg" alt="">
-                    <div class="details">
-                        <h3>Conquer Copycat</h3>
-                        <p>A copy of a popular Bootstrap template built from scratch with modern CSS. 
-                           Make sure to check out the original <a href="https://templatemo.com/tm-476-conquer">here.</a></p>
-                        <a target="_blank" href="http://conquer.getsetscript.com">View Project</a>
-                    </div>
-                </div>
-                <div class="gridBox">
                     <img src="./../../../Assets/Images/template.jpg" alt="">
                     <div class="details">
                         <h3>Project Templates</h3>
                         <p>ASP.NET Core project templates that use Webpack and Vue.</p>
                         <a target="_blank" href="https://github.com/GetSetScript">View Code</a>
+                    </div>
+                </div>
+                <div class="gridBox">
+                    <img src="./../../../Assets/Images/coming-soon.jpg" alt="">
+                    <div class="details">
+                        <h3>Coming Soon</h3>
+                        <p>More projects are on the way!</p>
                     </div>
                 </div>
             </div>
